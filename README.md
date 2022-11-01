@@ -1,31 +1,31 @@
 # teamZero
 CS225 Final Project
 
-Must load one or more data files as a graph and be able to use that graph to run algorithms of interest to the data set. 
+1. Must load one or more data files as a graph and be able to use that graph to run algorithms of interest to the data set. 
 
-Your code must work on your chosen data set and on other data that is of the correct format to match the data set you are working on.
+2. Your code must work on your chosen data set and on other data that is of the correct format to match the data set you are working on.
 
-You should have tests for each of your algorithms with appropriate test cases. These should be similar to the tests we provide on labs or mps.
+3. You should have tests for each of your algorithms with appropriate test cases. These should be similar to the tests we provide on labs or mps.
 
-Your code must build and run on EWS using only the material in your repo and libraries publicly installed on EWS. 
+4. Your code must build and run on EWS using only the material in your repo and libraries publicly installed on EWS. 
 
-All instructions needed to build the project must be in your repo and easy to understand.
+5. All instructions needed to build the project must be in your repo and easy to understand.
 
 Algorithms:
-Usene of the Traversals we covered in class and be able to output that result. It must also handle two other options one of which must be from the complex or uncovered options listed below.
+Use one of the Traversals we covered in class and be able to output that result. It must also handle two other options one of which must be from the complex or uncovered options listed below.
 
 Traversals:
-BFS (Breadth First Search)
-DFS (Depth First Search)
+1. BFS (Breadth First Search)
+2. DFS (Depth First Search)
 
 Covered Algorithms:
 Shortest Path:
-Dijkstra’s Algorithm
-Floyd-Warshall Algorithm
+1. Dijkstra’s Algorithm
+2. Floyd-Warshall Algorithm
 
 Minimum Spanning Tree:
-Kruskal Algorithm
-Prim’s Algorithm
+1. Kruskal Algorithm
+2. Prim’s Algorithm
 
 Complex or Uncovered Options:
 A* Search (https://en.wikipedia.org/wiki/A*_search_algorithm)
