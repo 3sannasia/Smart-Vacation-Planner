@@ -19,11 +19,11 @@ BFS (Breadth First Search)
 DFS (Depth First Search)
 
 Covered Algorithms:
-
-Shortest Path
+Shortest Path:
 Dijkstra’s Algorithm
 Floyd-Warshall Algorithm
-Minimum Spanning Tree
+
+Minimum Spanning Tree:
 Kruskal Algorithm
 Prim’s Algorithm
 
