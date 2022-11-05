@@ -1,19 +1,24 @@
 Project Proposal
 Leading Question
+
 Given the airport route data from the link we have provided below in the data format section, we decided on finding the top five shortest paths between two airports for people who want to fly between two locations. We will incorporate a twist in the form of evaluating flight time vs. distance between airports to find the five shortest paths. Our ultimate goal is to inspire people to see their options when flying to a place in a graphical and quick way. We plan on using BFS and Dijkstra’s algorithm to ultimately provide a graphical output to the user about the various paths they can take. 
 
 Traversal:
+
 Breadth First Search 
 We will use this traversal to keep traversing until we found five satisfactory routes between the two locations the user has passed in. 
+
 Algorithms:
 Dijkstra’s algorithm
 We will use this algorithm to find the shortest path between two airports
+
 Graphic Output - uncovered option
 Over a map PNG, we will draw the top five shortest paths between two locations/airports, so the user can visually see his/her options 
 Essentially recolor png to show our paths
 We plan to color least mile paths in a different color than least flight time paths and maybe add more “top five” paths using our data if time persists.
 Data Acquisition and Processing
 We will be using the routes dataset from OpenFlights.
+
 Data Format
 Our input dataset consists of files obtained from OpenFlights datasets. The first file contains a list of routes between airports, with each line containing the airline, source airport, destination airport, number of stops and necessary equipment. To make interpreting the data easier we will also use the airlines and airports datasets, which map the airport and airline acronyms to its full name and the airport to their location.
 The first file is approximately 2 MB large, and the other 2 are less than 400KB. Because such a large dataset may become difficult to work with, we will be using a smaller portion of the data, focusing on more recent years.
