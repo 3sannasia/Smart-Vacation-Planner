@@ -1,4 +1,3 @@
-
 # **Project Proposal**
 
 
@@ -44,7 +43,8 @@ To limit existing errors in our dataset, we will institute a number of checks. T
 
 **Data Storage**
 
-Our possible paths will be stored in a graph where nodes represent airports, and edges represent flight time. We will use that to calculate five closest paths between two airports. This graph will be represented as a map where the key is a string and the value is a vector of pairs (string, int). The key will be an airport and the vector of pairs will include a list of airports (first argument) that a plane from the key airport can fly to and their respective flight times(second argument). 
+Our possible paths will be stored in a graph where nodes represent airports, and edges represent flight time. We will use that to calculate five closest paths between two airports. This graph will be represented as a map where the key is a string and the value is a vector of pairs (string, int). The key will be an airport and the vector of pairs will include a list of airports (first argument) that a plane from the key airport can fly to and their respective flight times(second argument). The space complexity of this map will be O(n), as it is dependent on the number of key-value pairs in the dataset.
+
 
 
 ## 
@@ -107,4 +107,3 @@ Our possible paths will be stored in a graph where nodes represent airports, and
 1. Documentation Clean up 
 2. Code clean up 
 3. Prepare for presentation 
-

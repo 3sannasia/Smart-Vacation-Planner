@@ -22,7 +22,7 @@ Each team meeting, we will commonly agree on a workstream for the following week
 
 5. **Time Commitment** 
 To ensure that work is balanced, we will each dedicate 2 to 4 hours a week of independent work to the project.
-
+Since team members may have conflicts which may arise throughout the week, we have decided that if a synchronous meeting can not be scheduled, we will use our group chat to decide on tasks for the week, adjusting if one team member has significant commitments for that week. To prevent one team member for continuously slacking, we will keep logs of who has completed which tasks, and assess every week if work is being completed equitably on average. 
 
 6. **Conflict Resolution** 
 Everyone is expected to come to meetings at the specified time. If a member is repeatedly late, we will reiterate our team goals, and take action. If there is a disagreement, we will involve a third party to make the final decision. If an issue persists, we will let our mentor or another course staff know. 
