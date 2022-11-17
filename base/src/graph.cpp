@@ -1,32 +1,25 @@
 #include "graph.h"
 
-graph::graph(string input) {
+// graph::graph(string input) {
     
-}
+// }
 
-string file_to_string(const string& filename){
+string graph::file_to_string(const string& filename){
+    cout << "enter " << endl;
   ifstream ifs(filename);
-
-  string a; 
-  // int a_i = 0;
-  // string src_name;
-  // string src_id;
-  // string dest_name;
-  // string dest_id;
-  // string stops;
-  // string equip;
-
-
+  string line; 
   if (ifs.is_open()) {
     cout << "open " << endl;
-    while (ifs >> a) {
-        cout << "working: " << endl;
-        cout << a << endl;
+    vector<string> temp;
+    while (ifs >> line) {
+      int k = SplitString(line, ',', temp);
+      routes_.push_back(temp);
     }
+
     ifs.close();
   }
-  //cout<<strStream<<endl;
-  return a;
+  std::cout << "size is" << routes_.size() << std::endl;
+  return line;
 }
 
 //   ifstream ifs(nodes_file);

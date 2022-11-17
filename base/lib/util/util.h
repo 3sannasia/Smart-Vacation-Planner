@@ -14,7 +14,7 @@
  * @param filename The name of the file that will fill the string
  * @return A string containing the whole text of the given file
  */
-std::string file_to_string(const std::string & filename);
+//std::string file_to_string(const std::string & filename);
 
 /**
 * Functions for the removal of whitespace to the left or right of a string (or both)

@@ -23,8 +23,8 @@ using namespace std;
 // }
 
 int main() {
-
-    std::cout << file_to_string("/workspaces/cs225/teamZero/data/test_routes.csv") << std::endl;
+    graph g;
+    std::cout << g.file_to_string("/workspaces/cs225/teamZero/data/test_routes.csv") << std::endl;
     return 0;
 }
 
