@@ -1,15 +1,15 @@
 #include <iostream>
 #include <set>
 #include <vector>
-
-#include "cs225/PNG.h"
+#include "graph.h"
+#include "util/util.h"
 // #include "maptiles.h"
 // #include "mosaiccanvas.h"
 // #include "sourceimage.h"
 // #include "util/util.h"
 
-// using namespace std;
-// using namespace util;
+using namespace std;
+// // using namespace util;
 // using namespace cs225;
 
 // void makePhotoMosaic(const string& inFile, const string& tileDir, int numTiles,
@@ -23,7 +23,8 @@
 // }
 
 int main() {
-   
+
+    std::cout << file_to_string("data/test_routes.txt") << std::endl;
     return 0;
 }
 
