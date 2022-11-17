@@ -5,18 +5,28 @@ graph::graph(string input) {
 }
 
 string file_to_string(const string& filename){
-  ifstream text(filename);
+  ifstream ifs(filename);
 
-//   stringstream strStream;
-  string i;
-  if (text.is_open()) {
-    // strStream << text.rdbuf();
-    while (text >> i) {
-        cout << "working: " << i << endl;
+  string a; 
+  // int a_i = 0;
+  // string src_name;
+  // string src_id;
+  // string dest_name;
+  // string dest_id;
+  // string stops;
+  // string equip;
+
+
+  if (ifs.is_open()) {
+    cout << "open " << endl;
+    while (ifs >> a) {
+        cout << "working: " << endl;
+        cout << a << endl;
     }
+    ifs.close();
   }
   //cout<<strStream<<endl;
-  return "pot";
+  return a;
 }
 
 //   ifstream ifs(nodes_file);

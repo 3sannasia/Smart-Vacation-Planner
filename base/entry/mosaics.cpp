@@ -24,7 +24,7 @@ using namespace std;
 
 int main() {
 
-    std::cout << file_to_string("data/test_routes.txt") << std::endl;
+    std::cout << file_to_string("/workspaces/cs225/teamZero/data/test_routes.csv") << std::endl;
     return 0;
 }
 
