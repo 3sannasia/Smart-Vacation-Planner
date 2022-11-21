@@ -1,0 +1,5 @@
+add_test( [==[reading in routes data]==] /workspaces/cs225/teamZero/base/build/test [==[reading in routes data]==]  )
+set_tests_properties( [==[reading in routes data]==] PROPERTIES WORKING_DIRECTORY /workspaces/cs225/teamZero/base/build)
+add_test( [==[reading in airports data]==] /workspaces/cs225/teamZero/base/build/test [==[reading in airports data]==]  )
+set_tests_properties( [==[reading in airports data]==] PROPERTIES WORKING_DIRECTORY /workspaces/cs225/teamZero/base/build)
+set( test_TESTS [==[reading in routes data]==] [==[reading in airports data]==])
