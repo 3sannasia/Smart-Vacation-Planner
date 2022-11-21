@@ -24,8 +24,10 @@ using namespace std;
 
 int main() {
     graph g;
-    //std::cout << g.file_to_stringRoute("/workspaces/CS225/teamZero/data/test_routes.csv") << std::endl;
-    std::cout << g.file_to_stringAirport("/workspaces/CS225/teamZero/data/test_airport.csv") << std::endl;
+    std::cout << g.file_to_stringRoute("../test_routes.csv") << std::endl;
+    std::cout << g.file_to_stringAirport("../test_airport.csv") << std::endl;
+    string cur = "AER";
+    std::cout << g.getLongLat(cur).first << " " <<  g.getLongLat(cur).second << std::endl;
 
     return 0;
 }

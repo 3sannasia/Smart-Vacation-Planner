@@ -20,7 +20,7 @@ size_t getRoutesVector();
 size_t getAirportSize();
 size_t getAirportRowSize(int i);
 
-// pair<double, double> getLongLat(string IATA);
+pair<string, string> getLongLat(string IATA);
 
 
 private:

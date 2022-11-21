@@ -4,9 +4,16 @@
     
 // }
 
-// pair<double, double> graph::getLongLat(string IATA) {
+pair<string, string> graph::getLongLat(string IATA) {
+  for (size_t i = 0; i < airports_.size(); i++) {
+    cout << "IATA THING is " << airports_.at(i).at(0).substr(1, 3) << " " << IATA<< endl;
+    if (airports_.at(i).at(0).substr(1, 3) == IATA) {
+      return pair<string, string>(airports_.at(i).at(1), airports_.at(i).at(2));
+    }
+  }
+  return pair<string, string>("NOT FOUND", "NOT FOUND");
+}
 
-// }
 size_t graph::getAirportRowSize(int i) {
   return airports_.at(i).size();
 }
@@ -14,6 +21,7 @@ size_t graph::getAirportRowSize(int i) {
 size_t graph::getAirportSize() {
   return airports_.size();
 }
+
 string graph::file_to_stringRoute(const string& filename){
 
 ifstream ifs(filename);
