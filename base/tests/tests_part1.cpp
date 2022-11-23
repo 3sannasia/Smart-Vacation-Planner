@@ -46,6 +46,23 @@ TEST_CASE("getting longitude and latitude of an airport") {
   REQUIRE(g.getLatLong("AER") == expected);
 }
 
+TEST_CASE("Calculate distance between two airports") {
+  vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"} };
+  vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}};
+  
+  graph g(routes, airports_);
+
+  REQUIRE(g.getRoutesSize() == 1);
+  REQUIRE( g.getAirportSize() == 2);
+  
+  g.makeGraph();
+  vector<pair<string, int>> expected;
+  expected.push_back(make_pair("ORD", 1807));
+  REQUIRE(expected.size() == 1);
+
+  REQUIRE(g.getMap()["SFO"].at(0).second == 1807);
+}
+
 TEST_CASE("simple graph - 1 to 1 src to destination") {
   vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"} };
   vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}};
@@ -57,32 +74,32 @@ TEST_CASE("simple graph - 1 to 1 src to destination") {
   
   g.makeGraph();
   vector<pair<string, int>> expected;
-  expected.push_back(make_pair("ORD", 0));
-  std::cout << "The size of graph is " << expected.size() << std::endl;
-  //{pair<string, int>("ORD", 0)}; //not sure distance yet
+  expected.push_back(make_pair("ORD", 1807));
+  REQUIRE(expected.size() == 1);
+  // std::cout << "The size of graph is " << expected.size() << std::endl;
 
   REQUIRE(g.getMap()["SFO"] == expected);
 }
 
 
-TEST_CASE("simple graph - Multiple destinations from one airport") {
-  vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"}  };
-  vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "188"}};
+// TEST_CASE("simple graph - Multiple destinations from one airport") {
+//   vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"}  };
+//   vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "188"}};
  
-  graph g(routes, airports_);
+//   graph g(routes, airports_);
 
-  REQUIRE(g.getRoutesSize() == 2);
-  REQUIRE( g.getAirportSize() == 3);
+//   REQUIRE(g.getRoutesSize() == 2);
+//   REQUIRE( g.getAirportSize() == 3);
   
-  g.makeGraph();
+//   g.makeGraph();
 
-  vector<pair<string, int>> expected ;
-  expected.push_back(make_pair("ORD", 0));
-  expected.push_back(make_pair("LAX", 0));
+//   vector<pair<string, int>> expected ;
+//   expected.push_back(make_pair("ORD", 0));
+//   expected.push_back(make_pair("LAX", 0));
 
 
-  REQUIRE(g.getMap()["SFO"] == expected);
-}
+//   REQUIRE(g.getMap()["SFO"] == expected);
+// }
 
 
 // TEST_CASE("simple graph - Multiple destinations from multiple airport") {

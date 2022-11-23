@@ -30,7 +30,8 @@ class graph {
         size_t getAirportRowSize(int i);
 
         pair<string, string> getLatLong(string airport_code);
-        int calculateDist(string src_airport, string dest_airport);
+        long double toRadians(const long double degree);
+        long int calculateDist(string source, string destination);
 
     private:
         map<string,vector<pair<string, int>>> graph_;

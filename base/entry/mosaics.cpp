@@ -27,7 +27,7 @@ int main() {
     std::cout << g.file_to_stringRoute("../test_routes.csv") << std::endl;
     std::cout << g.file_to_stringAirport("../test_airport.csv") << std::endl;
     string cur = "AER";
-    std::cout << "Getting longitude and latitude of AER: "<< g.getLongLat(cur).first << " " <<  g.getLongLat(cur).second << std::endl;
+    std::cout << "Getting longitude and latitude of AER: "<< g.getLatLong(cur).first << " " <<  g.getLatLong(cur).second << std::endl;
 
     return 0;
 }
