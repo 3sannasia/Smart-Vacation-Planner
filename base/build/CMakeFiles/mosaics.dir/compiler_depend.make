@@ -282,6 +282,32 @@ CMakeFiles/mosaics.dir/entry/mosaics.cpp.o: ../entry/mosaics.cpp \
   /usr/include/aarch64-linux-gnu/bits/types/struct_sigstack.h \
   /usr/include/aarch64-linux-gnu/bits/sigthread.h \
   /usr/include/aarch64-linux-gnu/bits/signal_ext.h \
+  /usr/include/c++/11/math.h \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/aarch64-linux-gnu/bits/math-vector.h \
+  /usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/aarch64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/aarch64-linux-gnu/bits/fp-logb.h \
+  /usr/include/aarch64-linux-gnu/bits/fp-fast.h \
+  /usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/aarch64-linux-gnu/bits/mathcalls.h \
+  /usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/aarch64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/bits/specfun.h \
+  /usr/include/c++/11/limits \
+  /usr/include/c++/11/tr1/gamma.tcc \
+  /usr/include/c++/11/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/bessel_function.tcc \
+  /usr/include/c++/11/tr1/beta_function.tcc \
+  /usr/include/c++/11/tr1/ell_integral.tcc \
+  /usr/include/c++/11/tr1/exp_integral.tcc \
+  /usr/include/c++/11/tr1/hypergeometric.tcc \
+  /usr/include/c++/11/tr1/legendre_function.tcc \
+  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/11/tr1/poly_hermite.tcc \
+  /usr/include/c++/11/tr1/poly_laguerre.tcc \
+  /usr/include/c++/11/tr1/riemann_zeta.tcc \
   ../lib/util/util.h \
   /usr/include/c++/11/cassert \
   /usr/include/assert.h
@@ -290,6 +316,36 @@ CMakeFiles/mosaics.dir/entry/mosaics.cpp.o: ../entry/mosaics.cpp \
 /usr/include/assert.h:
 
 ../lib/util/util.h:
+
+/usr/include/c++/11/tr1/riemann_zeta.tcc:
+
+/usr/include/c++/11/tr1/poly_laguerre.tcc:
+
+/usr/include/c++/11/tr1/poly_hermite.tcc:
+
+/usr/include/c++/11/tr1/modified_bessel_func.tcc:
+
+/usr/include/c++/11/tr1/legendre_function.tcc:
+
+/usr/include/c++/11/tr1/exp_integral.tcc:
+
+/usr/include/c++/11/tr1/ell_integral.tcc:
+
+/usr/include/c++/11/tr1/special_function_util.h:
+
+/usr/include/c++/11/tr1/gamma.tcc:
+
+/usr/include/c++/11/limits:
+
+/usr/include/c++/11/bits/specfun.h:
+
+/usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h:
+
+/usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/math.h:
+
+/usr/include/c++/11/math.h:
 
 /usr/include/aarch64-linux-gnu/bits/sigthread.h:
 
@@ -322,6 +378,8 @@ CMakeFiles/mosaics.dir/entry/mosaics.cpp.o: ../entry/mosaics.cpp \
 /usr/include/aarch64-linux-gnu/sys/procfs.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/stack_t.h:
+
+/usr/include/c++/11/cmath:
 
 /usr/include/c++/11/bits/allocator.h:
 
@@ -447,7 +505,11 @@ CMakeFiles/mosaics.dir/entry/mosaics.cpp.o: ../entry/mosaics.cpp \
 
 /usr/include/c++/11/bits/stl_vector.h:
 
+/usr/include/aarch64-linux-gnu/bits/fp-logb.h:
+
 /usr/include/aarch64-linux-gnu/bits/stdint-intn.h:
+
+/usr/include/aarch64-linux-gnu/bits/math-vector.h:
 
 /usr/include/aarch64-linux-gnu/gnu/stubs.h:
 
@@ -481,6 +543,8 @@ CMakeFiles/mosaics.dir/entry/mosaics.cpp.o: ../entry/mosaics.cpp \
 
 /usr/include/aarch64-linux-gnu/c++/11/bits/cpu_defines.h:
 
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:
+
 /usr/include/aarch64-linux-gnu/asm/bitsperlong.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h:
@@ -496,6 +560,8 @@ CMakeFiles/mosaics.dir/entry/mosaics.cpp.o: ../entry/mosaics.cpp \
 /usr/include/aarch64-linux-gnu/asm/posix_types.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h:
+
+/usr/include/c++/11/tr1/beta_function.tcc:
 
 /usr/include/c++/11/array:
 
@@ -553,6 +619,8 @@ CMakeFiles/mosaics.dir/entry/mosaics.cpp.o: ../entry/mosaics.cpp \
 
 /usr/include/aarch64-linux-gnu/sys/cdefs.h:
 
+/usr/include/aarch64-linux-gnu/bits/iscanonical.h:
+
 /usr/include/c++/11/exception:
 
 /usr/include/c++/11/pstl/pstl_config.h:
@@ -560,6 +628,8 @@ CMakeFiles/mosaics.dir/entry/mosaics.cpp.o: ../entry/mosaics.cpp \
 /usr/include/aarch64-linux-gnu/bits/timesize.h:
 
 /usr/include/c++/11/bits/string_view.tcc:
+
+/usr/include/aarch64-linux-gnu/bits/fp-fast.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/FILE.h:
 
@@ -576,6 +646,8 @@ CMakeFiles/mosaics.dir/entry/mosaics.cpp.o: ../entry/mosaics.cpp \
 /usr/include/c++/11/bits/predefined_ops.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h:
+
+/usr/include/aarch64-linux-gnu/bits/flt-eval-method.h:
 
 /usr/include/locale.h:
 
@@ -621,9 +693,13 @@ CMakeFiles/mosaics.dir/entry/mosaics.cpp.o: ../entry/mosaics.cpp \
 
 /usr/include/c++/11/debug/safe_sequence.tcc:
 
+/usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
 /usr/include/c++/11/bits/exception_ptr.h:
 
 /usr/include/c++/11/ext/string_conversions.h:
+
+/usr/include/c++/11/tr1/bessel_function.tcc:
 
 /usr/include/aarch64-linux-gnu/bits/byteswap.h:
 
@@ -666,6 +742,8 @@ CMakeFiles/mosaics.dir/entry/mosaics.cpp.o: ../entry/mosaics.cpp \
 /usr/include/aarch64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/c++/11/debug/safe_iterator.h:
+
+/usr/include/c++/11/tr1/hypergeometric.tcc:
 
 /usr/include/aarch64-linux-gnu/bits/types/sigset_t.h:
 

@@ -29,6 +29,77 @@ TEST_CASE("reading in airports data") {
     REQUIRE( g.getAirportRowSize(1) == 4);
     
 //assert length of each row 
-
- 
 }
+
+TEST_CASE("getting longitude and latitude of an airport") {
+  graph g;
+  g.file_to_stringRoute("../test_routes.csv");
+  
+  REQUIRE(g.getRoutesSize() == 2);
+  REQUIRE( g.getRoutesVector() == 4);
+
+  g.file_to_stringAirport("../test_airport.csv");
+  REQUIRE( g.getAirportSize() == 3 );
+  REQUIRE( g.getAirportRowSize(1) == 4);
+
+  pair<string, string> expected = pair<string, string>("-6.081689834590001", "145.391998291");
+  REQUIRE(g.getLatLong("AER") == expected);
+}
+
+TEST_CASE("simple graph - 1 to 1 src to destination") {
+  vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"} };
+  vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}};
+  
+  graph g(routes, airports_);
+
+  REQUIRE(g.getRoutesSize() == 1);
+  REQUIRE( g.getAirportSize() == 2);
+  
+  g.makeGraph();
+  vector<pair<string, int>> expected;
+  expected.push_back(make_pair("ORD", 0));
+  std::cout << "The size of graph is " << expected.size() << std::endl;
+  //{pair<string, int>("ORD", 0)}; //not sure distance yet
+
+  REQUIRE(g.getMap()["SFO"] == expected);
+}
+
+
+TEST_CASE("simple graph - Multiple destinations from one airport") {
+  vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"}  };
+  vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "188"}};
+ 
+  graph g(routes, airports_);
+
+  REQUIRE(g.getRoutesSize() == 2);
+  REQUIRE( g.getAirportSize() == 3);
+  
+  g.makeGraph();
+
+  vector<pair<string, int>> expected ;
+  expected.push_back(make_pair("ORD", 0));
+  expected.push_back(make_pair("LAX", 0));
+
+
+  REQUIRE(g.getMap()["SFO"] == expected);
+}
+
+
+// TEST_CASE("simple graph - Multiple destinations from multiple airport") {
+//   vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"},  {"LAX", "1236", "SFO", "1234"}, {"LAX", "1236", "DAL", "1334"} };
+//   vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "188"}, {"DAL", "33", "97"}};
+ 
+//   graph g(routes, airports_);
+
+//   REQUIRE(g.getRoutesSize() == 4);
+//   REQUIRE( g.getAirportSize() == 4);
+  
+//   g.makeGraph();
+
+//   vector<pair<string, int>> expected ;
+//   expected.push_back(make_pair("ORD", 0));
+//   expected.push_back(make_pair("LAX", 0));
+
+
+//   REQUIRE(g.getMap()["SFO"] == expected);
+// }

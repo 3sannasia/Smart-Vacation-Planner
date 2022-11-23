@@ -353,6 +353,31 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
   /usr/include/aarch64-linux-gnu/bits/types/struct_sigstack.h \
   /usr/include/aarch64-linux-gnu/bits/sigthread.h \
   /usr/include/aarch64-linux-gnu/bits/signal_ext.h \
+  /usr/include/c++/11/math.h \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/aarch64-linux-gnu/bits/math-vector.h \
+  /usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/aarch64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/aarch64-linux-gnu/bits/fp-logb.h \
+  /usr/include/aarch64-linux-gnu/bits/fp-fast.h \
+  /usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/aarch64-linux-gnu/bits/mathcalls.h \
+  /usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/aarch64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/bits/specfun.h \
+  /usr/include/c++/11/tr1/gamma.tcc \
+  /usr/include/c++/11/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/bessel_function.tcc \
+  /usr/include/c++/11/tr1/beta_function.tcc \
+  /usr/include/c++/11/tr1/ell_integral.tcc \
+  /usr/include/c++/11/tr1/exp_integral.tcc \
+  /usr/include/c++/11/tr1/hypergeometric.tcc \
+  /usr/include/c++/11/tr1/legendre_function.tcc \
+  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/11/tr1/poly_hermite.tcc \
+  /usr/include/c++/11/tr1/poly_laguerre.tcc \
+  /usr/include/c++/11/tr1/riemann_zeta.tcc \
   ../lib/util/util.h \
   /usr/include/c++/11/set \
   /usr/include/c++/11/bits/stl_set.h \
@@ -372,6 +397,32 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
 /usr/include/c++/11/set:
 
 ../lib/util/util.h:
+
+/usr/include/c++/11/tr1/riemann_zeta.tcc:
+
+/usr/include/c++/11/tr1/poly_laguerre.tcc:
+
+/usr/include/c++/11/tr1/poly_hermite.tcc:
+
+/usr/include/c++/11/tr1/modified_bessel_func.tcc:
+
+/usr/include/c++/11/tr1/legendre_function.tcc:
+
+/usr/include/c++/11/tr1/exp_integral.tcc:
+
+/usr/include/c++/11/tr1/ell_integral.tcc:
+
+/usr/include/c++/11/tr1/special_function_util.h:
+
+/usr/include/c++/11/tr1/gamma.tcc:
+
+/usr/include/c++/11/bits/specfun.h:
+
+/usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h:
+
+/usr/include/math.h:
+
+/usr/include/c++/11/math.h:
 
 /usr/include/aarch64-linux-gnu/bits/sigthread.h:
 
@@ -404,6 +455,8 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
 /usr/include/aarch64-linux-gnu/bits/types/stack_t.h:
 
 /usr/include/linux/posix_types.h:
+
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:
 
 /usr/include/aarch64-linux-gnu/asm/bitsperlong.h:
 
@@ -520,6 +573,8 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
 /usr/include/c++/11/bits/ostream.tcc:
 
 /usr/include/aarch64-linux-gnu/bits/types/clockid_t.h:
+
+/usr/include/c++/11/cmath:
 
 /usr/include/c++/11/bits/allocator.h:
 
@@ -673,6 +728,8 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
 
 /usr/include/aarch64-linux-gnu/sys/cdefs.h:
 
+/usr/include/aarch64-linux-gnu/bits/iscanonical.h:
+
 /usr/include/c++/11/exception:
 
 /usr/include/c++/11/bits/predefined_ops.h:
@@ -706,6 +763,8 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
 /usr/include/c++/11/bits/char_traits.h:
 
 /usr/include/asm-generic/errno-base.h:
+
+/usr/include/aarch64-linux-gnu/bits/math-vector.h:
 
 /usr/include/aarch64-linux-gnu/gnu/stubs.h:
 
@@ -744,6 +803,8 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
 /usr/include/aarch64-linux-gnu/bits/timex.h:
 
 /usr/include/aarch64-linux-gnu/c++/11/bits/os_defines.h:
+
+/usr/include/aarch64-linux-gnu/bits/flt-eval-method.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/wint_t.h:
 
@@ -789,6 +850,8 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h:
 
+/usr/include/c++/11/tr1/beta_function.tcc:
+
 /usr/include/c++/11/array:
 
 /usr/include/c++/11/fstream:
@@ -806,6 +869,8 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
 /usr/include/catch2/internal/catch_test_macro_impl.hpp:
 
 /usr/include/aarch64-linux-gnu/bits/types/mbstate_t.h:
+
+/usr/include/aarch64-linux-gnu/bits/fp-fast.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/FILE.h:
 
@@ -853,6 +918,8 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
 
 /usr/include/c++/11/bits/concept_check.h:
 
+/usr/include/c++/11/tr1/bessel_function.tcc:
+
 /usr/include/aarch64-linux-gnu/bits/byteswap.h:
 
 /usr/include/c++/11/debug/assertions.h:
@@ -880,6 +947,8 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
 /usr/include/catch2/interfaces/catch_interfaces_registry_hub.hpp:
 
 /usr/include/c++/11/ext/string_conversions.h:
+
+/usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
 /usr/include/c++/11/bits/exception_ptr.h:
 
@@ -909,7 +978,11 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
 
 /usr/include/c++/11/debug/safe_iterator.h:
 
+/usr/include/c++/11/tr1/hypergeometric.tcc:
+
 /usr/include/aarch64-linux-gnu/bits/types/sigset_t.h:
+
+/usr/include/aarch64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/aarch64-linux-gnu/bits/stdint-intn.h:
 
@@ -1042,6 +1115,8 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
 /usr/include/aarch64-linux-gnu/c++/11/bits/ctype_base.h:
 
 /usr/include/aarch64-linux-gnu/c++/11/bits/ctype_inline.h:
+
+/usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h:
 
 /usr/include/catch2/catch_timer.hpp:
 
