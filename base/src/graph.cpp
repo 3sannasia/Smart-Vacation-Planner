@@ -10,9 +10,9 @@ map<string,vector<pair<string, int>>> graph::getGraph() {
   return graph_;
 }
 
+//bfs traversal
 void graph::BFS(string s)
 {
-  //  visited.resize(graph_.size(),false);
     queue<string> _queue;
  
     visited[s] = true;
@@ -34,8 +34,7 @@ void graph::BFS(string s)
     }
 }
 
-//sfo ----> ord
-// sfo ----> AER
+
 map<string,vector<pair<string, int>>> graph::getMap() {
   return graph_;
 }
@@ -78,26 +77,6 @@ pair<string, string> graph::getLatLong(string airport_code) {
   return pair<string, string>("-1", "-1");
 }
 
-// Calculate distance between two airports 
-// int graph::calculateDist(string src_airport, string dest_airport) {
-//   pair<string, string> src_latlong = getLatLong(src_airport);
-//   pair<string, string> dest_latlong = getLatLong(dest_airport);
-//   // long double src_lat = stod(src_latlong.first) / 57.29577951;
-//   // long double src_long = stod(src_latlong.second) / 57.29577951;
-//   // long double dest_lat = stod(dest_latlong.first) / 57.29577951;
-//   // long double dest_long = stod(dest_latlong.second) / 57.29577951;
-
-//   long double src_lat = stod(src_latlong.first);
-//   long double src_long = stod(src_latlong.second);
-//   long double dest_lat = stod(dest_latlong.first);
-//   long double dest_long = stod(dest_latlong.second);
-
-//   // Distance, d = 3963.0 * arccos[(sin(lat1) * sin(lat2)) + cos(lat1) * cos(lat2) * cos(long2 – long1)]
-//   double dist = 3963.0 * acos((sin(src_lat)) * sin(dest_lat)) + cos(src_lat) * cos(dest_lat) * cos(dest_long - src_long);
-//   cout << "DISTANCE BETWEEN SFO ORD IS " << distance(src_lat, src_long,dest_lat, dest_long) << endl;
-//   // return int(distance);=
-//   return 0;
-// }
 
 long double graph::toRadians(const long double degree)
 {
@@ -132,7 +111,7 @@ long int graph::calculateDist(string source, string destination)
     long double miles_conversion = 3956;
     
     dist = dist * miles_conversion;
-      cout << "DISTANCE BETWEEN SFO ORD IS " << int(dist) << endl;
+          cout << "DISTANCE BETWEEN " << source << " and " <<  destination << " is " << int(dist) << endl;
     return (int)dist;
 }
 
