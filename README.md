@@ -1,44 +1,19 @@
 # teamZero
-CS225 Final Project
+CS225 Final Project Fall 2022
 
-1. Must load one or more data files as a graph and be able to use that graph to run algorithms of interest to the data set. 
+"The README clearly and succintly describes the following:
 
-2. Your code must work on your chosen data set and on other data that is of the correct format to match the data set you are working on.
+The linkage and location of all major code, data, results, and deliverable files.
 
-3. You should have tests for each of your algorithms with appropriate test cases. These should be similar to the tests we provide on labs or mps.
+The necessary commands to run the assignment are well described and include instructions for selecting the input dataset and output location
 
-4. Your code must build and run on EWS using only the material in your repo and libraries publicly installed on EWS. 
+The test suite is well described and instructions on how to reproduce the tests are provided."
 
-5. All instructions needed to build the project must be in your repo and easy to understand.
+A descriptive README. In addition to the code itself, you must include a human-readable README.md which describes:
 
-Algorithms:
-Use one of the Traversals we covered in class and be able to output that result. It must also handle two other options one of which must be from the complex or uncovered options listed below.
+Github Organization – You should describe the physical location of all major files and deliverables (code, tests, data, the written report, the presentation video, etc…)
 
-Traversals:
-1. BFS (Breadth First Search)
-2. DFS (Depth First Search)
+Running Instructions – You should provide full instructions on how to build and run your executable, including how to define the input data and output location for each method. You should also have instructions on how to build and run your test suite, including a general description on what tests you have created. It is in your best interest to make the instructions (and the running of your executables and tests) as simple and straightforward as possible.\
 
-Covered Algorithms:
-Shortest Path:
-1. Dijkstra’s Algorithm
-2. Floyd-Warshall Algorithm
-
-Minimum Spanning Tree:
-1. Kruskal Algorithm
-2. Prim’s Algorithm
-
-Complex or Uncovered Options:
-A* Search (https://en.wikipedia.org/wiki/A*_search_algorithm)
-Iterative deepening depth-first search (https://en.wikipedia.org/wiki/Iterative_deepening_depth-first_search)
-Delta-stepping SSSP (https://www.sciencedirect.com/science/article/pii/S0196677403000762)
-Graphic Output of Graph
-Project on to map based on data
-Force-directed graph drawing (https://en.wikipedia.org/wiki/Force-directed_graph_drawing)
-Layered graph drawing (https://en.wikipedia.org/wiki/Layered_graph_drawing)
-Other methods
-Betweenness centrality (https://en.wikipedia.org/wiki/Betweenness_centrality)
-Eulerian path / cycle identification (https://en.wikipedia.org/wiki/Eulerian_path)
-Strongly connected component (https://en.wikipedia.org/wiki/Strongly_connected_component#Algorithms)
-PageRank (https://en.wikipedia.org/wiki/PageRank)
-Other ideas with improvement
-
+# Major Files
+Located in the 
