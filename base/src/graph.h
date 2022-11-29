@@ -19,14 +19,15 @@ class graph {
         graph();
         graph(vector<vector<string>> routes, vector<vector<string>> airports);
         void makeGraph();
-        map<string,vector<pair<string, int>>> getMap();
-
-        void routes(string file);
         string file_to_stringRoute(const string& filename);
         string file_to_stringAirport(const string& filename);
+        void BFS(string s);
+
+
+        //GETTERS
+        map<string,vector<pair<string, int>>> getMap();
         size_t getRoutesSize();
         size_t getRoutesVector();
-
         size_t getAirportSize();
         size_t getAirportRowSize(int i);
         map<string, bool> getVisited();
@@ -37,7 +38,6 @@ class graph {
         long double toRadians(const long double degree);
         long int calculateDist(string source, string destination);
 
-        void BFS(string s);
 
     private:
         map<string,vector<pair<string, int>>> graph_;
