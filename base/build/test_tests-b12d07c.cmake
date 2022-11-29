@@ -8,4 +8,6 @@ add_test( [==[Calculate distance between two airports]==] /workspaces/cs225/team
 set_tests_properties( [==[Calculate distance between two airports]==] PROPERTIES WORKING_DIRECTORY /workspaces/cs225/teamZero/base/build)
 add_test( [==[simple graph - 1 to 1 src to destination]==] /workspaces/cs225/teamZero/base/build/test [==[simple graph - 1 to 1 src to destination]==]  )
 set_tests_properties( [==[simple graph - 1 to 1 src to destination]==] PROPERTIES WORKING_DIRECTORY /workspaces/cs225/teamZero/base/build)
-set( test_TESTS [==[reading in routes data]==] [==[reading in airports data]==] [==[getting longitude and latitude of an airport]==] [==[Calculate distance between two airports]==] [==[simple graph - 1 to 1 src to destination]==])
+add_test( [==[bfs traversal - every airport is visited]==] /workspaces/cs225/teamZero/base/build/test [==[bfs traversal - every airport is visited]==]  )
+set_tests_properties( [==[bfs traversal - every airport is visited]==] PROPERTIES WORKING_DIRECTORY /workspaces/cs225/teamZero/base/build)
+set( test_TESTS [==[reading in routes data]==] [==[reading in airports data]==] [==[getting longitude and latitude of an airport]==] [==[Calculate distance between two airports]==] [==[simple graph - 1 to 1 src to destination]==] [==[bfs traversal - every airport is visited]==])

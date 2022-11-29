@@ -6,6 +6,34 @@ graph::graph() {
   
 }
 
+map<string,vector<pair<string, int>>> graph::getGraph() {
+  return graph_;
+}
+
+void graph::BFS(string s)
+{
+  //  visited.resize(graph_.size(),false);
+    queue<string> _queue;
+ 
+    visited[s] = true;
+    _queue.push(s);
+ 
+    while(!_queue.empty())
+{
+        s = _queue.front();
+        _queue.pop();
+
+        for (auto adj: graph_[s])
+        {
+            if (!visited[adj.first])
+            {
+                visited[adj.first] = true;
+                _queue.push(adj.first);
+            }
+        }
+    }
+}
+
 //sfo ----> ord
 // sfo ----> AER
 map<string,vector<pair<string, int>>> graph::getMap() {
@@ -112,6 +140,12 @@ long int graph::calculateDist(string source, string destination)
 size_t graph::getAirportRowSize(int i) {
   return airports_.at(i).size();
 }
+
+// Get visited
+map<string, bool> graph::getVisited() {
+  return visited;
+}
+
 
 //Gets the amount of rows in the airport data
 size_t graph::getAirportSize() {

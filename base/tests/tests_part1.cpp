@@ -120,3 +120,20 @@ TEST_CASE("simple graph - 1 to 1 src to destination") {
 
 //   REQUIRE(g.getMap()["SFO"] == expected);
 // }
+
+
+TEST_CASE("bfs traversal - every airport is visited") {
+  vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"}  };
+  vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "188"}};
+ 
+  graph g(routes, airports_);
+  g.makeGraph();
+  g.BFS("SFO");
+
+  for (auto s : g.getGraph()) {
+      REQUIRE(g.getVisited()[s.first] == true);
+      cout << s.first << endl;
+  }
+  
+  REQUIRE( g.getVisited().size() == g.getGraph().size());
+}

@@ -308,6 +308,13 @@ CMakeFiles/mosaics.dir/entry/mosaics.cpp.o: ../entry/mosaics.cpp \
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/debug/deque \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/stl_queue.h \
   ../lib/util/util.h \
   /usr/include/c++/11/cassert \
   /usr/include/assert.h
@@ -316,6 +323,16 @@ CMakeFiles/mosaics.dir/entry/mosaics.cpp.o: ../entry/mosaics.cpp \
 /usr/include/assert.h:
 
 ../lib/util/util.h:
+
+/usr/include/c++/11/bits/stl_queue.h:
+
+/usr/include/c++/11/bits/deque.tcc:
+
+/usr/include/c++/11/bits/stl_deque.h:
+
+/usr/include/c++/11/deque:
+
+/usr/include/c++/11/queue:
 
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
 
@@ -346,6 +363,8 @@ CMakeFiles/mosaics.dir/entry/mosaics.cpp.o: ../entry/mosaics.cpp \
 /usr/include/math.h:
 
 /usr/include/c++/11/math.h:
+
+/usr/include/c++/11/debug/deque:
 
 /usr/include/aarch64-linux-gnu/bits/sigthread.h:
 
@@ -746,6 +765,8 @@ CMakeFiles/mosaics.dir/entry/mosaics.cpp.o: ../entry/mosaics.cpp \
 /usr/include/c++/11/tr1/hypergeometric.tcc:
 
 /usr/include/aarch64-linux-gnu/bits/types/sigset_t.h:
+
+/usr/include/c++/11/bits/stl_heap.h:
 
 /usr/include/aarch64-linux-gnu/bits/long-double.h:
 

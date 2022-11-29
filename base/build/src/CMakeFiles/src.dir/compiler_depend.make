@@ -304,6 +304,13 @@ src/CMakeFiles/src.dir/graph.cpp.o: ../src/graph.cpp \
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/debug/deque \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/stl_queue.h \
   ../lib/util/util.h \
   /usr/include/c++/11/set \
   /usr/include/c++/11/bits/stl_set.h \
@@ -328,6 +335,16 @@ src/CMakeFiles/src.dir/mappic.cpp.o: ../src/mappic.cpp
 /usr/include/c++/11/set:
 
 ../lib/util/util.h:
+
+/usr/include/c++/11/bits/stl_queue.h:
+
+/usr/include/c++/11/bits/deque.tcc:
+
+/usr/include/c++/11/bits/stl_deque.h:
+
+/usr/include/c++/11/deque:
+
+/usr/include/c++/11/queue:
 
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
 
@@ -368,6 +385,8 @@ src/CMakeFiles/src.dir/mappic.cpp.o: ../src/mappic.cpp
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
 /usr/include/c++/11/vector:
+
+/usr/include/c++/11/debug/deque:
 
 /usr/include/aarch64-linux-gnu/bits/sigthread.h:
 
@@ -798,6 +817,8 @@ src/CMakeFiles/src.dir/mappic.cpp.o: ../src/mappic.cpp
 /usr/include/c++/11/tr1/hypergeometric.tcc:
 
 /usr/include/aarch64-linux-gnu/bits/types/sigset_t.h:
+
+/usr/include/c++/11/bits/stl_heap.h:
 
 /usr/include/aarch64-linux-gnu/bits/long-double.h:
 
