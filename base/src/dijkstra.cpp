@@ -35,7 +35,7 @@ void dijkstra::dijkstra_distance() {
         while (cur_apts.at(min).first != destination) {
             min++;
         }
-        cur_apts = graph_[cur_apts.at(cur).first];
+        cur_apts = graph_[cur_apts.at(min).first];
     }
 }
 pair<string, int> dijkstra::find_path(int stops, std::vector<std::pair<std::string, int>> airports) {
