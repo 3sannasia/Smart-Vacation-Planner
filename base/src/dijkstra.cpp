@@ -14,34 +14,42 @@ void dijkstra::dijkstra_distance() {
         shortest_paths.clear();
         return;
     }
-    auto cur_apt = graph_[source];
+    auto cur_apts = graph_[source];
     int stops = 0;
+    bool found = false;
+    int min = 0;
     while (shortest_paths.size() != 3) {
-        bool direct_found = false;
-        for (unsigned int i = 0; i < cur_apt.size(); i++) {
-            if (cur_apt.at(i).first == destination) {
-                shortest_paths.push_back(pair<string, int>(destination, stops));
-                direct_found = true;
-            } 
-            //else if (cur_apt.at(i).first == destination)
+        if (find_path(stops, cur_apts) != pair<string, int>("", 0)) {
+            shortest_paths.push_back(find_path(stops, cur_apts));
+            found = true;
         }
-        if (direct_found == false) {
-            
+        stops++;
+        for (unsigned int i = 0; i < cur_apts.size(); i++) {
+            if (cur_apts.at(i).first == destination) {
+                continue;
+            }
+            if (find_path(stops, graph_[cur_apts.at(i).first]) != pair<string, int>("", 0)) {
+                shortest_paths.push_back(find_path(stops, cur_apts));
+            }
         }
-        
+        while (cur_apts.at(min).first != destination) {
+            min++;
+        }
+        cur_apts = graph_[cur_apts.at(cur).first];
     }
-
-
+}
+pair<string, int> dijkstra::find_path(int stops, std::vector<std::pair<std::string, int>> airports) {
+    for (unsigned int i = 0; i < airports.size(); i++) {
+            if (airports.at(i).first == destination) {
+                return pair<string, int>(destination, stops);
+            } 
+    }
+    return pair<string, int>("", 0);
 }
 
 vector<pair<string, int>> dijkstra::get_shortest_paths() {
     return shortest_paths;
-}
-
-// vector<int> get_three_shortest_path() {
-    
-// }
-
+} 
 // sfo -> ord , lAX
 // <ord, 
 // to get third we must go into ord 
