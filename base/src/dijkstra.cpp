@@ -18,7 +18,7 @@ void dijkstra::dijkstra_distance() {
     int stops = 0;
     bool found = false;
     int min = 0;
-    while (shortest_paths.size() != 3) {
+    while (shortest_paths.size() != 3 || min == -1) {
         if (find_path(stops, cur_apts) != pair<string, int>("", 0)) {
             shortest_paths.push_back(find_path(stops, cur_apts));
             found = true;
@@ -33,6 +33,10 @@ void dijkstra::dijkstra_distance() {
             }
         }
         while (cur_apts.at(min).first != destination) {
+            if (min + 1 == cur_apts.size()) {
+                min = -1;
+                break;
+            }
             min++;
         }
         cur_apts = graph_[cur_apts.at(min).first];
