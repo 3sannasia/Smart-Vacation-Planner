@@ -40,6 +40,7 @@ map<string,vector<pair<string, int>>> graph::getMap() {
 }
 
 void graph::makeGraph() {
+ //   std::cout << "entering make graph" << std::endl;
 // src_code -> <<dest_code, distance><>>
   for (unsigned i = 0; i < routes_.size(); i++) {
     string src = routes_[i][0];
@@ -50,12 +51,14 @@ void graph::makeGraph() {
       continue;
     }
     if (graph_.find(src) != graph_.end()) {
+      //std::cout << "pushing" << std::endl;
         graph_.at(src).push_back(make_pair(dest, dist));
     }
     else {
       vector<pair<string, int>> temp;
       temp.push_back(make_pair(dest, dist));
       graph_.insert({src, temp});
+     // std::cout << "inserting" << std::endl;
     }
   }
   
@@ -111,7 +114,7 @@ long int graph::calculateDist(string source, string destination)
     long double miles_conversion = 3956;
     
     dist = dist * miles_conversion;
-          cout << "DISTANCE BETWEEN " << source << " and " <<  destination << " is " << int(dist) << endl;
+        //  cout << "DISTANCE BETWEEN " << source << " and " <<  destination << " is " << int(dist) << endl;
     return (int)dist;
 }
 
@@ -160,7 +163,7 @@ ifstream ifs(filename);
     }
         cout<< endl;
   }
-  cout << "Routes Size: " << routes_.size() << endl;
+ // cout << "Routes Size: " << routes_.size() << endl;
   return "";
 }
 size_t graph::getRoutesSize() {
@@ -207,6 +210,6 @@ ifstream ifs(filename);
     }
         cout<< endl;
   }
-  cout << "Airport Size: " << airports_.size() << endl;
+ // cout << "Airport Size: " << airports_.size() << endl;
   return "";
 }

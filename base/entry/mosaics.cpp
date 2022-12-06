@@ -22,7 +22,7 @@ using namespace std;
 //     bool help = false;
 // }
 
-int main() {
+int main(int argc, char** argv) {
     graph g;
     std::cout << g.file_to_stringRoute("../test_routes.csv") << std::endl;
     std::cout << g.file_to_stringAirport("../test_airport.csv") << std::endl;
@@ -31,6 +31,7 @@ int main() {
 
     return 0;
 }
+
 
 // void makePhotoMosaic(const string& inFile, const string& tileDir, int numTiles,
 //                      int pixelsPerTile, const string& outFile)

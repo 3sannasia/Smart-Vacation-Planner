@@ -9,7 +9,7 @@
 #include <vector>
 #include <math.h>
 #include <queue>
-#include "graph.h"
+
 using namespace std;
 
 
@@ -19,7 +19,7 @@ class dijkstra {
         dijkstra( map<string,vector<pair<string, int>>> graph, string src, string dest);
         void dijkstra_distance();
         vector<pair<string, int>> get_shortest_paths();
-        pair<string, int> find_path(int stops, std::vector<std::pair<std::string, int>> airports);
+        pair<string, int> find_path(int stops, std::vector<std::pair<std::string, int>> airports, string source);
 
     private:
         map<string,vector<pair<string, int>>> graph_;

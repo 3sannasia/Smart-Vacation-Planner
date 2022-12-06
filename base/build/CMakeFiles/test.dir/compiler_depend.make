@@ -391,6 +391,7 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
   /usr/include/c++/11/debug/set \
   /usr/include/c++/11/debug/set.h \
   /usr/include/c++/11/debug/multiset.h \
+  ../src/dijkstra.h \
   ../lib/cs225/point.h \
   /usr/include/c++/11/cstdarg \
   ../lib/cs225/point.hpp
@@ -795,6 +796,8 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
 /usr/include/c++/11/debug/debug.h:
 
 /usr/include/features-time64.h:
+
+../src/dijkstra.h:
 
 /usr/include/aarch64-linux-gnu/bits/time.h:
 
