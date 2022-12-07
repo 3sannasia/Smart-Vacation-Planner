@@ -3,17 +3,23 @@
 #include <vector>
 #include "graph.h"
 #include "util/util.h"
+#include "dijkstra.h"
+#include "mappic.h"
+
 // #include "maptiles.h"
 // #include "mosaiccanvas.h"
+
 // #include "sourceimage.h"
 // #include "util/util.h"
 
 using namespace std;
+
 // // using namespace util;
 // using namespace cs225;
 
 // void makePhotoMosaic(const string& inFile, const string& tileDir, int numTiles,
 //                      int pixelsPerTile, const string& outFile);
+
 // vector<TileImage> getTiles(string tileDir);
 // bool hasImageExtension(const string& fileName);
 
@@ -23,11 +29,36 @@ using namespace std;
 // }
 
 int main(int argc, char** argv) {
-    graph g;
-    std::cout << g.file_to_stringRoute("../test_routes.csv") << std::endl;
-    std::cout << g.file_to_stringAirport("../test_airport.csv") << std::endl;
-    string cur = "AER";
-    std::cout << "Getting longitude and latitude of AER: "<< g.getLatLong(cur).first << " " <<  g.getLatLong(cur).second << std::endl;
+    // pass source, shortest paths, destination
+    // graph g;
+    // std::cout << g.file_to_stringRoute("../test_routes.csv") << std::endl;
+    // std::cout << g.file_to_stringAirport("../test_airport.csv") << std::endl;
+    // string cur = "AER";
+    // std::cout << "Getting longitude and latitude of AER: "<< g.getLatLong(cur).first << " " <<  g.getLatLong(cur).second << std::endl;
+    
+    vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"}, {"SFO", "1234", "EWR", "1237"}, {"ORD", "1235", "EWR", "1237"} , {"LAX", "1236", "EWR", "1237"}    };
+    vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "118"}, {"EWR", "34", "119"}};
+    graph g(routes, airports_);
+    g.makeGraph();
+    
+    for (unsigned int i = 0; i < g.getMap()["LAX"].size(); i++) {
+        std::cout << "last case" <<  g.getMap()["LAX"].at(i).first << std::endl;
+    }
+    dijkstra dij(g.getMap(), "SFO", "EWR");
+    dij.dijkstra_distance();
+    auto test =  dij.get_shortest_paths();
+    std::cout << "size is" <<  test.size() << std::endl;
+
+    vector<pair<string, int>> expected_shortest_paths;
+
+    expected_shortest_paths.push_back(make_pair("SFO", 0));
+    expected_shortest_paths.push_back(make_pair("ORD", 1));
+    expected_shortest_paths.push_back(make_pair("LAX", 1));
+
+    mappic map_out("World_map_political_ISO");    
+
+    //map_output.drawAirports(g,dij);
+
 
     return 0;
 }

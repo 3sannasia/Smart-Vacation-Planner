@@ -172,34 +172,35 @@
 // }
 
 
-// TEST_CASE("0 to 1 stops test") {
+TEST_CASE("0 to 1 stops test") {
 
-//   // vector<vector<string>> routes = {{"LAX", "1234", "JFK", "1235"}, {"LAX", "1234", "SFO", "1236"}, {"LAX", "1234", "ORD", "1236"},{"SFO", "1234", "ORD", "JFK"}, {"ORD", "1234", "ORD", "EWR"}, {"EWR", "1234", "JFK", "1236"} };
-//   // vector<vector<string>> airports_ = {{"SFO", "0", "0"}, {"ORD", "0", "0"}, {"LAX", "0", "0"}, {"JFK", "0", "0"}, {"EWR", "0", "0"}};
+  // vector<vector<string>> routes = {{"LAX", "1234", "JFK", "1235"}, {"LAX", "1234", "SFO", "1236"}, {"LAX", "1234", "ORD", "1236"},{"SFO", "1234", "ORD", "JFK"}, {"ORD", "1234", "ORD", "EWR"}, {"EWR", "1234", "JFK", "1236"} };
+  // vector<vector<string>> airports_ = {{"SFO", "0", "0"}, {"ORD", "0", "0"}, {"LAX", "0", "0"}, {"JFK", "0", "0"}, {"EWR", "0", "0"}};
  
-//    vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"}, {"SFO", "1234", "EWR", "1237"}, {"ORD", "1235", "EWR", "1237"} , {"LAX", "1236", "EWR", "1237"}    };
-//   vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "118"}, {"EWR", "34", "119"}};
-//   graph g(routes, airports_);
-//   g.makeGraph();
+  vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"}, {"SFO", "1234", "EWR", "1237"}, {"ORD", "1235", "EWR", "1237"} , {"LAX", "1236", "EWR", "1237"}    };
+  vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "118"}, {"EWR", "34", "119"}};
+  graph g(routes, airports_);
+  g.makeGraph();
   
-//   for (unsigned int i = 0; i < g.getMap()["LAX"].size(); i++) {
-//     std::cout << "last case" <<  g.getMap()["LAX"].at(i).first << std::endl;
-//   }
-//   dijkstra dij(g.getMap(), "SFO", "EWR");
-//   dij.dijkstra_distance();
-//   auto test =  dij.get_shortest_paths();
-//   std::cout << "size is" <<  test.size() << std::endl;
+  for (unsigned int i = 0; i < g.getMap()["LAX"].size(); i++) {
+    std::cout << "last case" <<  g.getMap()["LAX"].at(i).first << std::endl;
+  }
+  dijkstra dij(g.getMap(), "SFO", "EWR");
+  dij.dijkstra_distance();
+  auto test =  dij.get_shortest_paths();
+  std::cout << "size is" <<  test.size() << std::endl;
 
-//   vector<pair<string, int>> expected_shortest_paths;
+  vector<pair<string, int>> expected_shortest_paths;
 
-//   expected_shortest_paths.push_back(make_pair("SFO", 0));
-//   expected_shortest_paths.push_back(make_pair("ORD", 1));
-//   expected_shortest_paths.push_back(make_pair("LAX", 1));
+  expected_shortest_paths.push_back(make_pair("SFO", 0));
+  expected_shortest_paths.push_back(make_pair("ORD", 1));
+  expected_shortest_paths.push_back(make_pair("LAX", 1));
 
-//  REQUIRE(dij.get_shortest_paths() == expected_shortest_paths);
-//  REQUIRE(dij.get_shortest_paths().size() == 3);
-//  //JFK, SFO, EWR
-// }
+ REQUIRE(dij.get_shortest_paths() == expected_shortest_paths);
+ REQUIRE(dij.get_shortest_paths().size() == 3);
+
+ 
+}
 
 TEST_CASE("Only 1 stops") {
    vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"}, {"SFO", "1234", "JFK", "1237"}, {"ORD", "1235", "EWR", "1237"} , {"LAX", "1236", "EWR", "1237"}    };
