@@ -57,7 +57,7 @@ int main(int argc, char** argv) {
 
     mappic map_out("World_map_political_ISO");    
 
-    //map_output.drawAirports(g,dij);
+    map_out.drawAirports(g,dij);
 
 
     return 0;
