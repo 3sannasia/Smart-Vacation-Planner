@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspaces/cs225/teamZero/base
+CMAKE_SOURCE_DIR = /workspaces/CS225/teamZero/base
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/cs225/teamZero/base/build
+CMAKE_BINARY_DIR = /workspaces/CS225/teamZero/base/build
 
 # Include any dependencies generated for this target.
 include lib/CMakeFiles/util.dir/depend.make
@@ -72,30 +72,30 @@ include lib/CMakeFiles/util.dir/flags.make
 lib/CMakeFiles/util.dir/util/coloredout.cpp.o: lib/CMakeFiles/util.dir/flags.make
 lib/CMakeFiles/util.dir/util/coloredout.cpp.o: ../lib/util/coloredout.cpp
 lib/CMakeFiles/util.dir/util/coloredout.cpp.o: lib/CMakeFiles/util.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/cs225/teamZero/base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/CMakeFiles/util.dir/util/coloredout.cpp.o"
-	cd /workspaces/cs225/teamZero/base/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/util.dir/util/coloredout.cpp.o -MF CMakeFiles/util.dir/util/coloredout.cpp.o.d -o CMakeFiles/util.dir/util/coloredout.cpp.o -c /workspaces/cs225/teamZero/base/lib/util/coloredout.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/CS225/teamZero/base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/CMakeFiles/util.dir/util/coloredout.cpp.o"
+	cd /workspaces/CS225/teamZero/base/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/util.dir/util/coloredout.cpp.o -MF CMakeFiles/util.dir/util/coloredout.cpp.o.d -o CMakeFiles/util.dir/util/coloredout.cpp.o -c /workspaces/CS225/teamZero/base/lib/util/coloredout.cpp
 
 lib/CMakeFiles/util.dir/util/coloredout.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/util.dir/util/coloredout.cpp.i"
-	cd /workspaces/cs225/teamZero/base/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/cs225/teamZero/base/lib/util/coloredout.cpp > CMakeFiles/util.dir/util/coloredout.cpp.i
+	cd /workspaces/CS225/teamZero/base/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/CS225/teamZero/base/lib/util/coloredout.cpp > CMakeFiles/util.dir/util/coloredout.cpp.i
 
 lib/CMakeFiles/util.dir/util/coloredout.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/util.dir/util/coloredout.cpp.s"
-	cd /workspaces/cs225/teamZero/base/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/cs225/teamZero/base/lib/util/coloredout.cpp -o CMakeFiles/util.dir/util/coloredout.cpp.s
+	cd /workspaces/CS225/teamZero/base/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/CS225/teamZero/base/lib/util/coloredout.cpp -o CMakeFiles/util.dir/util/coloredout.cpp.s
 
 lib/CMakeFiles/util.dir/util/util.cpp.o: lib/CMakeFiles/util.dir/flags.make
 lib/CMakeFiles/util.dir/util/util.cpp.o: ../lib/util/util.cpp
 lib/CMakeFiles/util.dir/util/util.cpp.o: lib/CMakeFiles/util.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/cs225/teamZero/base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/CMakeFiles/util.dir/util/util.cpp.o"
-	cd /workspaces/cs225/teamZero/base/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/util.dir/util/util.cpp.o -MF CMakeFiles/util.dir/util/util.cpp.o.d -o CMakeFiles/util.dir/util/util.cpp.o -c /workspaces/cs225/teamZero/base/lib/util/util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/CS225/teamZero/base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/CMakeFiles/util.dir/util/util.cpp.o"
+	cd /workspaces/CS225/teamZero/base/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/util.dir/util/util.cpp.o -MF CMakeFiles/util.dir/util/util.cpp.o.d -o CMakeFiles/util.dir/util/util.cpp.o -c /workspaces/CS225/teamZero/base/lib/util/util.cpp
 
 lib/CMakeFiles/util.dir/util/util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/util.dir/util/util.cpp.i"
-	cd /workspaces/cs225/teamZero/base/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/cs225/teamZero/base/lib/util/util.cpp > CMakeFiles/util.dir/util/util.cpp.i
+	cd /workspaces/CS225/teamZero/base/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/CS225/teamZero/base/lib/util/util.cpp > CMakeFiles/util.dir/util/util.cpp.i
 
 lib/CMakeFiles/util.dir/util/util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/util.dir/util/util.cpp.s"
-	cd /workspaces/cs225/teamZero/base/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/cs225/teamZero/base/lib/util/util.cpp -o CMakeFiles/util.dir/util/util.cpp.s
+	cd /workspaces/CS225/teamZero/base/build/lib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/CS225/teamZero/base/lib/util/util.cpp -o CMakeFiles/util.dir/util/util.cpp.s
 
 # Object files for target util
 util_OBJECTS = \
@@ -109,19 +109,19 @@ lib/libutil.a: lib/CMakeFiles/util.dir/util/coloredout.cpp.o
 lib/libutil.a: lib/CMakeFiles/util.dir/util/util.cpp.o
 lib/libutil.a: lib/CMakeFiles/util.dir/build.make
 lib/libutil.a: lib/CMakeFiles/util.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/cs225/teamZero/base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libutil.a"
-	cd /workspaces/cs225/teamZero/base/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/util.dir/cmake_clean_target.cmake
-	cd /workspaces/cs225/teamZero/base/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/util.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/CS225/teamZero/base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libutil.a"
+	cd /workspaces/CS225/teamZero/base/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/util.dir/cmake_clean_target.cmake
+	cd /workspaces/CS225/teamZero/base/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/util.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib/CMakeFiles/util.dir/build: lib/libutil.a
 .PHONY : lib/CMakeFiles/util.dir/build
 
 lib/CMakeFiles/util.dir/clean:
-	cd /workspaces/cs225/teamZero/base/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/util.dir/cmake_clean.cmake
+	cd /workspaces/CS225/teamZero/base/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/util.dir/cmake_clean.cmake
 .PHONY : lib/CMakeFiles/util.dir/clean
 
 lib/CMakeFiles/util.dir/depend:
-	cd /workspaces/cs225/teamZero/base/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/cs225/teamZero/base /workspaces/cs225/teamZero/base/lib /workspaces/cs225/teamZero/base/build /workspaces/cs225/teamZero/base/build/lib /workspaces/cs225/teamZero/base/build/lib/CMakeFiles/util.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspaces/CS225/teamZero/base/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/CS225/teamZero/base /workspaces/CS225/teamZero/base/lib /workspaces/CS225/teamZero/base/build /workspaces/CS225/teamZero/base/build/lib /workspaces/CS225/teamZero/base/build/lib/CMakeFiles/util.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/CMakeFiles/util.dir/depend
 

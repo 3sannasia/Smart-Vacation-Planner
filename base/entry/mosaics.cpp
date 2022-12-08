@@ -55,7 +55,7 @@ int main(int argc, char** argv) {
     expected_shortest_paths.push_back(make_pair("ORD", 1));
     expected_shortest_paths.push_back(make_pair("LAX", 1));
 
-    mappic map_out("World_map_political_ISO");    
+    mappic map_out("../empty_map.png");    
 
     map_out.drawAirports(g,dij);
 

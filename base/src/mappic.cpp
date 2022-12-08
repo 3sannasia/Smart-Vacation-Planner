@@ -2,10 +2,10 @@
 
 // #include "cs225/Animation.h"
 
-mappic::mappic(const std::string output)  {
-    : output_file_name(output)
-    this->png = new cs225::PNG();
-    png->readFromFile("teamZero/base/entry/World_map_political_ISO.png"); 
+mappic::mappic(const std::string output) : output_file_name(output) {
+    this->png = new cs225::PNG(1406,625);
+    png->readFromFile("../World_map_political_ISO.png");    
+   // std::cout << png->readFromFile("./World_map_political_ISO.png") << std::endl; 
 }
 
 mappic::~mappic() {

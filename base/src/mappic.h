@@ -92,7 +92,7 @@ cs225::PNG* getPNG();
 
 private:
 
-//const std::string empty_map_file = std::string("Maps/empty_map.png"); //currently not adaptable to other maps 
+const std::string empty_map_file = std::string("Maps/empty_map.png"); //currently not adaptable to other maps 
 
 /** Stored png object, which is painting as a result of actions*/
 cs225::PNG* png;
