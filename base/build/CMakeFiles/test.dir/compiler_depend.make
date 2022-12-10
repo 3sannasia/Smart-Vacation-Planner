@@ -392,10 +392,17 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
   /usr/include/c++/11/debug/set.h \
   /usr/include/c++/11/debug/multiset.h \
   ../src/dijkstra.h \
+  ../src/mappic.h \
+  ../lib/cs225/PNG.h \
+  ../lib/cs225/HSLAPixel.h \
   ../lib/cs225/point.h \
   /usr/include/c++/11/cstdarg \
   ../lib/cs225/point.hpp
 
+
+../lib/cs225/HSLAPixel.h:
+
+../src/mappic.h:
 
 /usr/include/c++/11/debug/multiset.h:
 
@@ -809,7 +816,25 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
 
 /usr/include/c++/11/ratio:
 
+<<<<<<< HEAD
 /usr/include/aarch64-linux-gnu/c++/11/bits/c++allocator.h:
+=======
+../lib/cs225/PNG.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/c++/11/debug/helper_functions.h:
+
+/usr/include/c++/11/ext/type_traits.h:
+
+/usr/include/catch2/catch_totals.hpp:
+
+/usr/include/catch2/catch_assertion_info.hpp:
+>>>>>>> 00d4075 (Map Output Test Cases)
 
 ../tests/tests_part1.cpp:
 

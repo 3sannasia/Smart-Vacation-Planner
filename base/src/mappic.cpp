@@ -18,12 +18,13 @@ std::pair<int, int> mappic::convertCoordsToPixel(double latitude, double longitu
     if (longitude < -180 || longitude > 180 || latitude < -90 || latitude > 90) {
         std::cout << "Warning. Airport with coordinates " << latitude << ", " << longitude << " are invalid and may not print!" << std::endl;
     }
-    int x = ((longitude*map_width)/360) - 150;
+    int x = ((longitude*map_width)/360) - 50;
     if (longitude < LEFT_SIDE_LONG) {
          x = this->map_width + x;
     } 
     //-3 was just trial and error specific to b/w map
     int y =((latitude*map_height)/180) + 100;
+
     // double imageNorthLat = 59.545457;  // Latitude of the image's northern edge
 	// double imageSouthLat = 49.431947;  // Latitude of the image's southern edge
 
@@ -60,6 +61,7 @@ void mappic::drawAirports(graph g, dijkstra d) {
       
     for (auto x : d.get_shortest_paths()) {
         const std::pair<double, double> coords_shortest_path = convertDouble(g.getLatLong(x.first));
+        std::cout << "hit" << std::endl;
         drawAirport(coords_shortest_path, LIGHT_BLUE);
     }
     const std::pair<double, double> coords_dest = convertDouble(g.getLatLong(d.destination));
@@ -76,9 +78,9 @@ void mappic::drawAirport(const std::pair<double, double> coords, cs225::HSLAPixe
     auto pixel_coords = convertCoordsToPixel(coords.first, coords.second);
     std::cout << color.h <<" "<< pixel_coords.first << " " << pixel_coords.second << std::endl;
     for (int x = std::max(0, pixel_coords.first - (this->map_width/AIRPORT_SIZE_MULTIPLIER)); x < std::min(this->map_width, pixel_coords.first + (this->map_width/AIRPORT_SIZE_MULTIPLIER)); ++x)  {
-         std::cout << "enter" <<std::endl;
+         //std::cout << "enter" <<std::endl;
         for (int y = std::max(0, pixel_coords.second - (this->map_width/AIRPORT_SIZE_MULTIPLIER)); y < std::min(this->map_height, pixel_coords.second + this->map_width/AIRPORT_SIZE_MULTIPLIER);++y) {
-            std::cout << "yuh" << std::endl;
+            //std::cout << "yuh" << std::endl;
             png->getPixel(x, y).h = color.h;
             png->getPixel(x, y).s = color.s;
             png->getPixel(x, y).l = color.l;

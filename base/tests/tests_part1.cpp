@@ -8,6 +8,7 @@
 #include <locale>
 #include "graph.h"
 #include "dijkstra.h"
+#include "mappic.h"
 #include "cs225/point.h"
 
 
@@ -143,32 +144,36 @@ TEST_CASE("bfs traversal - every airport is visited") {
       cout << s.first << endl;
   }
   
-  REQUIRE( g.getVisited().size() == g.getGraph().size());
-}
+//   REQUIRE( g.getVisited().size() == g.getGraph().size());
+// }
 
 
-TEST_CASE("edge case - not possibe") {
-   vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"}, {"SFO", "1234", "EWR", "1237"}, {"ORD", "1235", "EWR", "1237"} , {"LAX", "1236", "EWR", "1237"}    };
-  vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "118"}, {"EWR", "34", "119"}};
-  graph g(routes, airports_);
-  g.makeGraph();
+// TEST_CASE("edge case - not possibe") {
+//    vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"}, {"SFO", "1234", "EWR", "1237"}, {"ORD", "1235", "EWR", "1237"} , {"LAX", "1236", "EWR", "1237"}    };
+//   vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "118"}, {"EWR", "34", "119"}};
+//   graph g(routes, airports_);
+//   g.makeGraph();
 
-  dijkstra dij(g.getMap(), "JFK", "EWR");
-  dij.dijkstra_distance();
-  auto test =  dij.get_shortest_paths();
-  // std::cout << "size is" <<  test.size() << std::endl;
-  // for (unsigned int i = 0; i < dij.get_shortest_paths().size(); i++) {
-  //   std::cout << test[i].first << std::endl;
-  // }
+//   dijkstra dij(g.getMap(), "JFK", "EWR");
+//   dij.dijkstra_distance();
+//   auto test =  dij.get_shortest_paths();
+//   // std::cout << "size is" <<  test.size() << std::endl;
+//   // for (unsigned int i = 0; i < dij.get_shortest_paths().size(); i++) {
+//   //   std::cout << test[i].first << std::endl;
+//   // }
 
-  vector<pair<string, int>> expected_shortest_paths;
+//   vector<pair<string, int>> expected_shortest_paths;
 
- REQUIRE(dij.get_shortest_paths() == expected_shortest_paths);
- REQUIRE(dij.get_shortest_paths().size() == 0);
-}
+//   // expected_shortest_paths.push_back(make_pair("SFO", 0));
+//   // expected_shortest_paths.push_back(make_pair("ORD", 1));
+//   // expected_shortest_paths.push_back(make_pair("LAX", 1));
+
+//  REQUIRE(dij.get_shortest_paths() == expected_shortest_paths);
+//  REQUIRE(dij.get_shortest_paths().size() == 0);
+// }
 
 
-TEST_CASE("0 to 1 stops test") {
+// TEST_CASE("0 to 1 stops test") {
 
   // vector<vector<string>> routes = {{"LAX", "1234", "JFK", "1235"}, {"LAX", "1234", "SFO", "1236"}, {"LAX", "1234", "ORD", "1236"},{"SFO", "1234", "ORD", "JFK"}, {"ORD", "1234", "ORD", "EWR"}, {"EWR", "1234", "JFK", "1236"} };
   // vector<vector<string>> airports_ = {{"SFO", "0", "0"}, {"ORD", "0", "0"}, {"LAX", "0", "0"}, {"JFK", "0", "0"}, {"EWR", "0", "0"}};
@@ -177,6 +182,10 @@ TEST_CASE("0 to 1 stops test") {
   vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "118"}, {"EWR", "34", "119"}};
   graph g(routes, airports_);
   g.makeGraph();
+//   vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"}, {"SFO", "1234", "EWR", "1237"}, {"ORD", "1235", "EWR", "1237"} , {"LAX", "1236", "EWR", "1237"}    };
+//   vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "118"}, {"EWR", "34", "119"}};
+//   graph g(routes, airports_);
+//   g.makeGraph();
   
   for (unsigned int i = 0; i < g.getMap()["LAX"].size(); i++) {
     std::cout << "last case" <<  g.getMap()["LAX"].at(i).first << std::endl;
@@ -188,10 +197,15 @@ TEST_CASE("0 to 1 stops test") {
 
   vector<pair<string, int>> expected_shortest_paths;
 
-  expected_shortest_paths.push_back(make_pair("SFO", 0));
-  expected_shortest_paths.push_back(make_pair("ORD", 1));
-  expected_shortest_paths.push_back(make_pair("LAX", 1));
+//   expected_shortest_paths.push_back(make_pair("SFO", 0));
+//   expected_shortest_paths.push_back(make_pair("ORD", 1));
+//   expected_shortest_paths.push_back(make_pair("LAX", 1));
 
+//  REQUIRE(dij.get_shortest_paths() == expected_shortest_paths);
+//  REQUIRE(dij.get_shortest_paths().size() == 3);
+
+ 
+// }
  REQUIRE(dij.get_shortest_paths() == expected_shortest_paths);
  REQUIRE(dij.get_shortest_paths().size() == 3);
  //JFK, SFO, EWR
@@ -203,26 +217,62 @@ TEST_CASE("Only 1 stops") {
   graph g(routes, airports_);
   g.makeGraph();
   
-  // for (unsigned int i = 0; i < g.getMap()["LAX"].size(); i++) {
-  //   std::cout << "last case" <<  g.getMap()["LAX"].at(i).first << std::endl;
-  // }
-   dijkstra dij(g.getMap(), "SFO", "EWR");
+//   for (unsigned int i = 0; i < g.getMap()["LAX"].size(); i++) {
+//     std::cout << "last case" <<  g.getMap()["LAX"].at(i).first << std::endl;
+//   }
+//   dijkstra dij(g.getMap(), "SFO", "EWR");
+//   dij.dijkstra_distance();
+//   auto test =  dij.get_shortest_paths();
+
+
+//   vector<pair<string, int>> expected_shortest_paths;
+
+//   // expected_shortest_paths.push_back(make_pair("SFO", 0));
+//   expected_shortest_paths.push_back(make_pair("ORD", 1));
+//   expected_shortest_paths.push_back(make_pair("LAX", 1));
+
+//  REQUIRE(dij.get_shortest_paths() == expected_shortest_paths);
+//  REQUIRE(dij.get_shortest_paths().size() == 2);
+// }
+
+TEST_CASE("Map Output - 1") {
+    vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"}, {"SFO", "1234", "EWR", "1237"}, {"ORD", "1235", "EWR", "1237"} , {"LAX", "1236", "EWR", "1237"}    };
+    vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "118"}, {"EWR", "40", "74"}};
+    graph g(routes, airports_);
+    g.makeGraph();
+    
+    dijkstra dij(g.getMap(), "SFO", "EWR");
     dij.dijkstra_distance();
-  auto test =  dij.get_shortest_paths();
-   std::cout << test.size() << std::endl;
-   for (unsigned int i = 0; i < test.size(); i++) {
-     std::cout << "in vector" << test[i].first << std::endl;
-   }
-  // dij.dijkstra_distance();
-  // auto test =  dij.get_shortest_paths();
+    auto test =  dij.get_shortest_paths();
 
+    mappic map_out("../World_map_political_ISO.png");  
+    map_out.drawAirports(g,dij);
 
-  vector<pair<string, int>> expected_shortest_paths;
+    mappic expected("../empty_map");
+    for (int x = 0; x < expected.map_width; x++ ) {
+      for (int y = 0; y < expected.map_height; y++ ) {
+          REQUIRE(expected.png->getPixel(x,y) == map_out.png->getPixel(x,y));
+      }
+    }
 
-  // expected_shortest_paths.push_back(make_pair("SFO", 0));
-  expected_shortest_paths.push_back(make_pair("ORD", 1));
-  expected_shortest_paths.push_back(make_pair("LAX", 1));
+TEST_CASE("Map Output - Empty") {
+    vector<vector<string>> routes = {   };
+    vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "118"}, {"EWR", "40", "74"}};
+    graph g(routes, airports_);
+    g.makeGraph();
+    
+    dijkstra dij(g.getMap(), "SFO", "EWR");
+    dij.dijkstra_distance();
+    auto test =  dij.get_shortest_paths();
 
- REQUIRE(dij.get_shortest_paths() == expected_shortest_paths);
- REQUIRE(dij.get_shortest_paths().size() == 2);
+    mappic map_out("../World_map_political_ISO.png");  
+    map_out.drawAirports(g,dij);
+    
+    mappic expected("../empty_map"); // have empty map
+    for (int x = 0; x < expected.map_width; x++ ) {
+      for (int y = 0; y < expected.map_height; y++ ) {
+          REQUIRE(expected.png->getPixel(x,y) == map_out.png->getPixel(x,y));
+      }
+    }
+
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 add_test( [==[reading in routes data]==] /workspaces/cs225/teamZero/base/build/test [==[reading in routes data]==]  )
 set_tests_properties( [==[reading in routes data]==] PROPERTIES WORKING_DIRECTORY /workspaces/cs225/teamZero/base/build)
 add_test( [==[reading in airports data]==] /workspaces/cs225/teamZero/base/build/test [==[reading in airports data]==]  )
@@ -21,3 +22,8 @@ set_tests_properties( [==[0 to 1 stops test]==] PROPERTIES WORKING_DIRECTORY /wo
 add_test( [==[Only 1 stops]==] /workspaces/cs225/teamZero/base/build/test [==[Only 1 stops]==]  )
 set_tests_properties( [==[Only 1 stops]==] PROPERTIES WORKING_DIRECTORY /workspaces/cs225/teamZero/base/build)
 set( test_TESTS [==[reading in routes data]==] [==[reading in airports data]==] [==[getting longitude and latitude of an airport]==] [==[Calculate distance between two airports]==] [==[simple graph - 1 to 1 src to destination]==] [==[simple graph - Multiple destinations from one airport]==] [==[simple graph - Multiple destinations from multiple airport]==] [==[bfs traversal - every airport is visited]==] [==[edge case - not possibe]==] [==[0 to 1 stops test]==] [==[Only 1 stops]==])
+=======
+add_test( [==[Map Output - 1]==] /workspaces/CS225/teamZero/base/build/test [==[Map Output - 1]==]  )
+set_tests_properties( [==[Map Output - 1]==] PROPERTIES WORKING_DIRECTORY /workspaces/CS225/teamZero/base/build)
+set( test_TESTS [==[Map Output - 1]==])
+>>>>>>> 00d4075 (Map Output Test Cases)

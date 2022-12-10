@@ -89,18 +89,21 @@ void drawFlight(std::pair<double, double> coorda, std::pair<double, double> coor
  * Returns the picture of the map at the time it is called. Used in Search.animateBFS() to create animation
  */
 cs225::PNG* getPNG();
+cs225::PNG* png;
+
+
+const int map_width = 1160;
+const int map_height = 899; 
 
 private:
 
 const std::string empty_map_file = std::string("Maps/empty_map.png"); //currently not adaptable to other maps 
 
 /** Stored png object, which is painting as a result of actions*/
-cs225::PNG* png;
+
 
 const std::string output_file_name;
 
-const int map_width = 1160;
-const int map_height = 899; 
 
 //These are pixel parameters, because equator wasn't exactly middle and prime meridian were also not.
 //If not using empty_map.png this needs to be recalibrated along with map_width and map_height

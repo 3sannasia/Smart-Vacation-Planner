@@ -392,8 +392,16 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o
  /usr/include/c++/11/debug/set
  /usr/include/c++/11/debug/set.h
  /usr/include/c++/11/debug/multiset.h
+<<<<<<< HEAD
  /workspaces/cs225/teamZero/base/src/dijkstra.h
  /workspaces/cs225/teamZero/base/lib/cs225/point.h
+=======
+ /workspaces/CS225/teamZero/base/src/dijkstra.h
+ /workspaces/CS225/teamZero/base/src/mappic.h
+ /workspaces/CS225/teamZero/base/lib/cs225/PNG.h
+ /workspaces/CS225/teamZero/base/lib/cs225/HSLAPixel.h
+ /workspaces/CS225/teamZero/base/lib/cs225/point.h
+>>>>>>> 00d4075 (Map Output Test Cases)
  /usr/include/c++/11/cstdarg
  /workspaces/cs225/teamZero/base/lib/cs225/point.hpp
 
