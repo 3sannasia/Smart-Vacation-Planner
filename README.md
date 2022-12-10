@@ -14,8 +14,8 @@ We will be using the [route](https://openflights.org/data.html#route) and [aipor
 # Code
 All major files of our classes and functions are in /base/src. In this directory, files and functions for data cleaning and storage, graph implementation, breadth-first search algorithm, Dijkstra's algorithm, and our map output visualization.
 
-# Tests
-Tests are located in /base/tests.
+# Tests.
+Tests are located in /base/tests. Test data files are located in /base for ease of access.
 
 Look below on how to run tests!
 
