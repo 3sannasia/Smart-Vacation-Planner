@@ -28,4 +28,4 @@ First, make sure you are running in Docker. If not, follow these [instructions](
 
 To ultimately use our program, run make && ./main source_airport destination_airport. Fill in the source and destination with an airport of your choice in the International Air Transport Association Location Identifier 3-letter code. For example, the San Francisco International Airport would be SFO. The Chicago O'Hare International Airport is ORD.
 
-
+# Diagrams
