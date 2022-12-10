@@ -12,7 +12,7 @@ We'll Link it here
 We will be using the [route](https://openflights.org/data.html#route) and [aiport](https://openflights.org/data.html#airport) datasets from [OpenFlights](https://openflights.org). We filter and clean both datasets in our program.
 
 # Code
-All major files of our classes and functions are in /base/src. In this directory, files and functions for data cleaning and storage, graph implementation, breadth-first search algorithm, Dijkstra's algorithm, and our map output visualization.
+All major files of our classes and functions are in /base/src. In this directory, files and functions for data cleaning and storage (graph.cpp), graph implementation (graph.cpp), breadth-first search algorithm (graph.cpp), Dijkstra's algorithm (dijkstra.cpp), and our map output visualization (mappic.cpp).
 
 # Tests.
 Tests are located in /base/tests. Test data files are located in /base for ease of access in the form of small and complete datasets for both routes and airports.
