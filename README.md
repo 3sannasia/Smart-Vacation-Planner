@@ -18,7 +18,7 @@ All major files of our classes and functions are in /base/src. In this directory
 Tests are located in /base/tests.
 To run tests, make sure you are in the /base/build directory and run "make test && ./test"
 
-We mainly test for four components of our project, correct data parsing and storage of routes and airport data, correct graph storage and edge distance calculations, complete graph traversal of breadth-first search algorithm. For more info on what we are testing, please check out the comments in the /base/tests directory!
+We mainly test for four components of our project, correct data parsing and storage of routes and airport data, correct graph storage and edge distance calculations, complete graph traversal of breadth-first search algorithm. We additionally check for incomplete data and if an airport cannot be found. For more info on what we are testing, please check out the comments in the /base/tests directory!
 
 # Documents (Written Report, Project Proposal, Team Contract)
 These are located in /Documents
