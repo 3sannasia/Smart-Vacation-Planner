@@ -99,8 +99,8 @@ cs225::PNG* png;
 
 const std::string output_file_name;
 
-const int map_width = 1350;
-const int map_height = 675; 
+const int map_width = 1160;
+const int map_height = 899; 
 
 //These are pixel parameters, because equator wasn't exactly middle and prime meridian were also not.
 //If not using empty_map.png this needs to be recalibrated along with map_width and map_height

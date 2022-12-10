@@ -47,15 +47,9 @@ int main(int argc, char** argv) {
     dijkstra dij(g.getMap(), "SFO", "EWR");
     dij.dijkstra_distance();
     auto test =  dij.get_shortest_paths();
-    std::cout << "size is" <<  test.size() << std::endl;
+    std::cout << dij.source << " " << dij.destination <<std::endl;
 
-    vector<pair<string, int>> expected_shortest_paths;
-
-    expected_shortest_paths.push_back(make_pair("SFO", 0));
-    expected_shortest_paths.push_back(make_pair("ORD", 1));
-    expected_shortest_paths.push_back(make_pair("LAX", 1));
-
-    mappic map_out("../empty_map.png");    
+    mappic map_out("../World_map_political_ISO.png");    
 
     map_out.drawAirports(g,dij);
 
