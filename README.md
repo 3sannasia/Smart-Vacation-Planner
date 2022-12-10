@@ -16,7 +16,8 @@ All major files of our classes and functions are in /base/src. In this directory
 
 # Tests
 Tests are located in /base/tests.
-To run tests, make sure you are in the /base/build directory and run "make test && ./test"
+
+Look below on how to run tests!
 
 We mainly test for four components of our project, correct data parsing and storage of routes and airport data, correct graph storage and edge distance calculations, complete graph traversal of breadth-first search algorithm. We additionally check for incomplete data and if an airport cannot be found. For more info on what we are testing, please check out the comments in the /base/tests directory!
 
@@ -27,5 +28,7 @@ These are located in /Documents
 First, make sure you are running in Docker. If not, follow these [instructions](https://courses.engr.illinois.edu/cs225/fa2022/resources/own-machine/). Second, traverse to the /base directory. If there is already a build folder, delete it. Type each "mkdir build" and "cd build" in the terminal separately (should be in teamZero/base/build). Run "cmake .." 
 
 To ultimately use our program, run make && ./main source_airport destination_airport. Fill in the source and destination with an airport of your choice in the International Air Transport Association Location Identifier 3-letter code. For example, the San Francisco International Airport would be SFO. The Chicago O'Hare International Airport is ORD.
+
+To run tests, make sure you are in the /base/build directory and run "make test && ./test"
 
 # Diagrams
