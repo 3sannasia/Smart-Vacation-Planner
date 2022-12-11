@@ -310,8 +310,12 @@ CMakeFiles/mosaics.dir/entry/mosaics.cpp.o: ../entry/mosaics.cpp \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
   ../lib/util/util.h \
   /usr/include/c++/11/cassert \
-  /usr/include/assert.h
+  /usr/include/assert.h \
+  ../src/dijkstra.h \
+  ../src/mappic.h
 
+
+../src/mappic.h:
 
 /usr/include/assert.h:
 
@@ -432,6 +436,8 @@ CMakeFiles/mosaics.dir/entry/mosaics.cpp.o: ../entry/mosaics.cpp \
 /usr/include/c++/11/ext/alloc_traits.h:
 
 /usr/include/c++/11/cstdio:
+
+../src/dijkstra.h:
 
 /usr/include/aarch64-linux-gnu/bits/time.h:
 

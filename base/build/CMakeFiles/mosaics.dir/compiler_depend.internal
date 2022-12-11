@@ -312,4 +312,6 @@ CMakeFiles/mosaics.dir/entry/mosaics.cpp.o
  /workspaces/cs225/teamZero/base/lib/util/util.h
  /usr/include/c++/11/cassert
  /usr/include/assert.h
+ /workspaces/cs225/teamZero/base/src/dijkstra.h
+ /workspaces/cs225/teamZero/base/src/mappic.h
 
