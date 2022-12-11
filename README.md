@@ -33,8 +33,12 @@ To run tests, make sure you are in the /base/build directory and run "make test 
 
 # Diagrams
 
-![map](/Documents/mapoutput.png)
-
+BFS
 ![map](/Documents/BFS.png)
 
+Dijkstra
 ![map](/Documents/dijkstra.png)
+
+Map Output
+![map](/Documents/mapoutput.png)
+
