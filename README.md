@@ -32,3 +32,9 @@ To ultimately use our program, run make && ./mosaics source_airport destination_
 To run tests, make sure you are in the /base/build directory and run "make test && ./test"
 
 # Diagrams
+
+![map](/Documents/mapoutput.png)
+
+![map](/Documents/BFS.png)
+
+![map](/Documents/dijkstra.png)
