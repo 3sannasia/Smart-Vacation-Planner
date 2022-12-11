@@ -32,15 +32,15 @@ int main(int argc, char** argv) {
     // pass source, shortest paths, destination
      graph g;
      g.file_to_stringRoute("../test_routes.csv");
-     g.file_to_stringAirport("../test_airport.csv");
+     g.file_to_stringAirport("../airports.csv");
 
     g.makeGraph();
     
-    dijkstra dij(g.getMap(), "ORD", "EWR");
+    dijkstra dij(g.getMap(), "AER", "KZN");
     dij.dijkstra_distance();
-    auto test =  dij.get_shortest_paths();
-    std::cout << dij.source << " " << dij.destination <<std::endl;
-    std::cout <<test.size() <<std::endl;
+    // auto test =  dij.get_shortest_paths();
+    // std::cout << dij.source << " " << dij.destination <<std::endl;
+    // std::cout <<test.size() <<std::endl;
     mappic map_out("../empty_map.png");    
     map_out.drawAirports(g,dij);
     

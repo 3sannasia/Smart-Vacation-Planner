@@ -392,10 +392,17 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
   /usr/include/c++/11/debug/set.h \
   /usr/include/c++/11/debug/multiset.h \
   ../src/dijkstra.h \
+  ../src/mappic.h \
+  ../lib/cs225/PNG.h \
+  ../lib/cs225/HSLAPixel.h \
   ../lib/cs225/point.h \
   /usr/include/c++/11/cstdarg \
   ../lib/cs225/point.hpp
 
+
+../lib/cs225/PNG.h:
+
+../src/mappic.h:
 
 /usr/include/c++/11/debug/multiset.h:
 
@@ -906,6 +913,8 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
 /usr/include/c++/11/bits/move.h:
 
 /usr/include/catch2/internal/catch_reusable_string_stream.hpp:
+
+../lib/cs225/HSLAPixel.h:
 
 /usr/include/aarch64-linux-gnu/c++/11/bits/c++config.h:
 

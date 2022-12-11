@@ -139,6 +139,7 @@ string graph::file_to_stringRoute(const string& filename){
 ifstream ifs(filename);
   string line; 
   if (ifs.is_open()) {
+    std::cout << "opening" << std::endl;
     while (ifs >> line) {
     size_t pos = line.find("\\N");
     if (pos != string::npos) {
@@ -155,6 +156,7 @@ ifstream ifs(filename);
        }
     }
     ifs.close();
+    std::cout << "done" << std::endl;
   }
 
   for (size_t i = 0; i < routes_.size(); i++) {
@@ -178,6 +180,7 @@ string graph::file_to_stringAirport(const string& filename){
 ifstream ifs(filename);
   string line; 
   if (ifs.is_open()) {
+        std::cout << "opening" << std::endl;
     while (getline(ifs, line)) {
     size_t pos = line.find("\\N");
     if (pos != string::npos) {
