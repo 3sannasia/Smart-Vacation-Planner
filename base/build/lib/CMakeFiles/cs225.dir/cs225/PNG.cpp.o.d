@@ -222,9 +222,10 @@ lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: \
   /workspaces/cs225/teamZero/base/lib/lodepng/lodepng.h \
   /usr/include/string.h /usr/include/strings.h \
   /workspaces/cs225/teamZero/base/lib/cs225/PNG.h \
-  /workspaces/cs225/teamZero/base/lib/cs225/LUVAPixel.h \
+  /workspaces/cs225/teamZero/base/lib/cs225/HSLAPixel.h \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/sstream \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/bits/sstream.tcc \
+  /workspaces/cs225/teamZero/base/lib/cs225/RGB_HSL.h \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/cmath \
   /usr/include/math.h /usr/include/aarch64-linux-gnu/bits/math-vector.h \
   /usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -248,7 +249,4 @@ lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/tr1/modified_bessel_func.tcc \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/tr1/poly_hermite.tcc \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/tr1/poly_laguerre.tcc \
-  /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/tr1/riemann_zeta.tcc \
-  /workspaces/cs225/teamZero/base/lib/cs225/RGB_LUV.h \
-  /workspaces/cs225/teamZero/base/lib/cs225/ColorSpace/ColorSpace.h \
-  /workspaces/cs225/teamZero/base/lib/cs225/ColorSpace/Conversion.h
+  /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/tr1/riemann_zeta.tcc

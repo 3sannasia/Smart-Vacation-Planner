@@ -8,7 +8,7 @@ set(OLD_GLOB
   "/workspaces/cs225/teamZero/base/lib/cs225/ColorSpace/ColorSpace.cpp"
   "/workspaces/cs225/teamZero/base/lib/cs225/ColorSpace/Comparison.cpp"
   "/workspaces/cs225/teamZero/base/lib/cs225/ColorSpace/Conversion.cpp"
-  "/workspaces/cs225/teamZero/base/lib/cs225/LUVAPixel.cpp"
+  "/workspaces/cs225/teamZero/base/lib/cs225/HSLAPixel.cpp"
   "/workspaces/cs225/teamZero/base/lib/cs225/PNG.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

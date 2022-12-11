@@ -314,7 +314,8 @@ lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.o: ../lib/cs225/ColorSp
   /usr/include/c++/11/debug/safe_sequence.tcc \
   /usr/include/c++/11/pstl/execution_defs.h
 
-lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o: ../lib/cs225/LUVAPixel.cpp \
+lib/CMakeFiles/cs225.dir/cs225/HSLAPixel.cpp.o: ../lib/cs225/HSLAPixel.cpp \
+  ../lib/cs225/HSLAPixel.h \
   /usr/include/c++/11/iostream \
   /usr/include/aarch64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/aarch64-linux-gnu/c++/11/bits/os_defines.h \
@@ -500,7 +501,6 @@ lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o: ../lib/cs225/LUVAPixel.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  ../lib/cs225/LUVAPixel.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/cmath \
@@ -765,9 +765,10 @@ lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: ../lib/cs225/PNG.cpp \
   /usr/include/string.h \
   /usr/include/strings.h \
   ../lib/cs225/PNG.h \
-  ../lib/cs225/LUVAPixel.h \
+  ../lib/cs225/HSLAPixel.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
+  ../lib/cs225/RGB_HSL.h \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
   /usr/include/aarch64-linux-gnu/bits/math-vector.h \
@@ -792,10 +793,7 @@ lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: ../lib/cs225/PNG.cpp \
   /usr/include/c++/11/tr1/modified_bessel_func.tcc \
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
-  /usr/include/c++/11/tr1/riemann_zeta.tcc \
-  ../lib/cs225/RGB_LUV.h \
-  ../lib/cs225/ColorSpace/ColorSpace.h \
-  ../lib/cs225/ColorSpace/Conversion.h
+  /usr/include/c++/11/tr1/riemann_zeta.tcc
 
 
 ../lib/cs225/PNG.h:
@@ -812,6 +810,8 @@ lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: ../lib/cs225/PNG.cpp \
 
 /usr/include/c++/11/bits/ostream.tcc:
 
+/usr/include/aarch64-linux-gnu/c++/11/bits/ctype_inline.h:
+
 /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h:
 
 /usr/include/c++/11/bits/sstream.tcc:
@@ -819,6 +819,8 @@ lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: ../lib/cs225/PNG.cpp \
 /usr/include/c++/11/new:
 
 /usr/include/c++/11/bits/stl_iterator.h:
+
+../lib/cs225/RGB_HSL.h:
 
 /usr/include/aarch64-linux-gnu/bits/waitflags.h:
 
@@ -920,8 +922,6 @@ lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: ../lib/cs225/PNG.cpp \
 
 /usr/include/alloca.h:
 
-../lib/cs225/RGB_LUV.h:
-
 /usr/include/aarch64-linux-gnu/bits/time64.h:
 
 /usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h:
@@ -1001,8 +1001,6 @@ lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: ../lib/cs225/PNG.cpp \
 /usr/include/c++/11/bits/refwrap.h:
 
 ../lib/cs225/ColorSpace/Comparison.h:
-
-../lib/cs225/LUVAPixel.h:
 
 /usr/include/c++/11/bits/stl_bvector.h:
 
@@ -1128,6 +1126,8 @@ lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: ../lib/cs225/PNG.cpp \
 
 /usr/include/aarch64-linux-gnu/bits/endian.h:
 
+../lib/cs225/HSLAPixel.h:
+
 /usr/include/aarch64-linux-gnu/c++/11/bits/c++config.h:
 
 /usr/include/aarch64-linux-gnu/bits/errno.h:
@@ -1238,7 +1238,11 @@ lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: ../lib/cs225/PNG.cpp \
 
 /usr/include/c++/11/pstl/execution_defs.h:
 
-../lib/cs225/LUVAPixel.cpp:
+../lib/cs225/HSLAPixel.cpp:
+
+/usr/include/aarch64-linux-gnu/c++/11/bits/c++locale.h:
+
+/usr/include/c++/11/cerrno:
 
 /usr/include/c++/11/ostream:
 
@@ -1285,10 +1289,6 @@ lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: ../lib/cs225/PNG.cpp \
 /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h:
 
 /usr/include/c++/11/cstdio:
-
-/usr/include/aarch64-linux-gnu/c++/11/bits/c++locale.h:
-
-/usr/include/c++/11/cerrno:
 
 /usr/include/aarch64-linux-gnu/bits/flt-eval-method.h:
 
@@ -1341,5 +1341,3 @@ lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: ../lib/cs225/PNG.cpp \
 /usr/include/linux/errno.h:
 
 /usr/include/aarch64-linux-gnu/c++/11/bits/ctype_base.h:
-
-/usr/include/aarch64-linux-gnu/c++/11/bits/ctype_inline.h:

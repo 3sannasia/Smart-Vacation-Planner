@@ -378,6 +378,12 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/debug/deque \
+  /usr/include/c++/11/bits/stl_queue.h \
   ../lib/util/util.h \
   /usr/include/c++/11/set \
   /usr/include/c++/11/bits/stl_set.h \
@@ -385,6 +391,7 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
   /usr/include/c++/11/debug/set \
   /usr/include/c++/11/debug/set.h \
   /usr/include/c++/11/debug/multiset.h \
+  ../src/dijkstra.h \
   ../lib/cs225/point.h \
   /usr/include/c++/11/cstdarg \
   ../lib/cs225/point.hpp
@@ -397,6 +404,16 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
 /usr/include/c++/11/set:
 
 ../lib/util/util.h:
+
+/usr/include/c++/11/bits/stl_queue.h:
+
+/usr/include/c++/11/bits/deque.tcc:
+
+/usr/include/c++/11/bits/stl_deque.h:
+
+/usr/include/c++/11/deque:
+
+/usr/include/c++/11/queue:
 
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
 
@@ -423,6 +440,8 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
 /usr/include/math.h:
 
 /usr/include/c++/11/math.h:
+
+/usr/include/c++/11/debug/deque:
 
 /usr/include/aarch64-linux-gnu/bits/sigthread.h:
 
@@ -777,6 +796,8 @@ CMakeFiles/test.dir/tests/tests_part1.cpp.o: ../tests/tests_part1.cpp \
 /usr/include/c++/11/debug/debug.h:
 
 /usr/include/features-time64.h:
+
+../src/dijkstra.h:
 
 /usr/include/aarch64-linux-gnu/bits/time.h:
 

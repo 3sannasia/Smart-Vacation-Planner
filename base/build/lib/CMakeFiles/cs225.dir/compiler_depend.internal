@@ -317,8 +317,9 @@ lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.o
  /usr/include/c++/11/debug/safe_sequence.tcc
  /usr/include/c++/11/pstl/execution_defs.h
 
-lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o
- /workspaces/cs225/teamZero/base/lib/cs225/LUVAPixel.cpp
+lib/CMakeFiles/cs225.dir/cs225/HSLAPixel.cpp.o
+ /workspaces/cs225/teamZero/base/lib/cs225/HSLAPixel.cpp
+ /workspaces/cs225/teamZero/base/lib/cs225/HSLAPixel.h
  /usr/include/c++/11/iostream
  /usr/include/aarch64-linux-gnu/c++/11/bits/c++config.h
  /usr/include/aarch64-linux-gnu/c++/11/bits/os_defines.h
@@ -504,7 +505,6 @@ lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o
  /usr/include/c++/11/bits/ostream.tcc
  /usr/include/c++/11/istream
  /usr/include/c++/11/bits/istream.tcc
- /workspaces/cs225/teamZero/base/lib/cs225/LUVAPixel.h
  /usr/include/c++/11/sstream
  /usr/include/c++/11/bits/sstream.tcc
  /usr/include/c++/11/cmath
@@ -770,9 +770,10 @@ lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o
  /usr/include/string.h
  /usr/include/strings.h
  /workspaces/cs225/teamZero/base/lib/cs225/PNG.h
- /workspaces/cs225/teamZero/base/lib/cs225/LUVAPixel.h
+ /workspaces/cs225/teamZero/base/lib/cs225/HSLAPixel.h
  /usr/include/c++/11/sstream
  /usr/include/c++/11/bits/sstream.tcc
+ /workspaces/cs225/teamZero/base/lib/cs225/RGB_HSL.h
  /usr/include/c++/11/cmath
  /usr/include/math.h
  /usr/include/aarch64-linux-gnu/bits/math-vector.h
@@ -798,7 +799,4 @@ lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o
  /usr/include/c++/11/tr1/poly_hermite.tcc
  /usr/include/c++/11/tr1/poly_laguerre.tcc
  /usr/include/c++/11/tr1/riemann_zeta.tcc
- /workspaces/cs225/teamZero/base/lib/cs225/RGB_LUV.h
- /workspaces/cs225/teamZero/base/lib/cs225/ColorSpace/ColorSpace.h
- /workspaces/cs225/teamZero/base/lib/cs225/ColorSpace/Conversion.h
 

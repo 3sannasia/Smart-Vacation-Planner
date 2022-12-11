@@ -231,29 +231,29 @@ cs225/ColorSpace/Conversion.cpp.s:
 	cd /workspaces/cs225/teamZero/base/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/ColorSpace/Conversion.cpp.s
 .PHONY : cs225/ColorSpace/Conversion.cpp.s
 
-cs225/LUVAPixel.o: cs225/LUVAPixel.cpp.o
-.PHONY : cs225/LUVAPixel.o
+cs225/HSLAPixel.o: cs225/HSLAPixel.cpp.o
+.PHONY : cs225/HSLAPixel.o
 
 # target to build an object file
-cs225/LUVAPixel.cpp.o:
-	cd /workspaces/cs225/teamZero/base/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.o
-.PHONY : cs225/LUVAPixel.cpp.o
+cs225/HSLAPixel.cpp.o:
+	cd /workspaces/cs225/teamZero/base/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/HSLAPixel.cpp.o
+.PHONY : cs225/HSLAPixel.cpp.o
 
-cs225/LUVAPixel.i: cs225/LUVAPixel.cpp.i
-.PHONY : cs225/LUVAPixel.i
+cs225/HSLAPixel.i: cs225/HSLAPixel.cpp.i
+.PHONY : cs225/HSLAPixel.i
 
 # target to preprocess a source file
-cs225/LUVAPixel.cpp.i:
-	cd /workspaces/cs225/teamZero/base/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.i
-.PHONY : cs225/LUVAPixel.cpp.i
+cs225/HSLAPixel.cpp.i:
+	cd /workspaces/cs225/teamZero/base/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/HSLAPixel.cpp.i
+.PHONY : cs225/HSLAPixel.cpp.i
 
-cs225/LUVAPixel.s: cs225/LUVAPixel.cpp.s
-.PHONY : cs225/LUVAPixel.s
+cs225/HSLAPixel.s: cs225/HSLAPixel.cpp.s
+.PHONY : cs225/HSLAPixel.s
 
 # target to generate assembly for a file
-cs225/LUVAPixel.cpp.s:
-	cd /workspaces/cs225/teamZero/base/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/LUVAPixel.cpp.s
-.PHONY : cs225/LUVAPixel.cpp.s
+cs225/HSLAPixel.cpp.s:
+	cd /workspaces/cs225/teamZero/base/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/cs225/HSLAPixel.cpp.s
+.PHONY : cs225/HSLAPixel.cpp.s
 
 cs225/PNG.o: cs225/PNG.cpp.o
 .PHONY : cs225/PNG.o
@@ -371,9 +371,9 @@ help:
 	@echo "... cs225/ColorSpace/Conversion.o"
 	@echo "... cs225/ColorSpace/Conversion.i"
 	@echo "... cs225/ColorSpace/Conversion.s"
-	@echo "... cs225/LUVAPixel.o"
-	@echo "... cs225/LUVAPixel.i"
-	@echo "... cs225/LUVAPixel.s"
+	@echo "... cs225/HSLAPixel.o"
+	@echo "... cs225/HSLAPixel.i"
+	@echo "... cs225/HSLAPixel.s"
 	@echo "... cs225/PNG.o"
 	@echo "... cs225/PNG.i"
 	@echo "... cs225/PNG.s"

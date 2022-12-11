@@ -8,6 +8,7 @@
 #include <signal.h>
 #include <vector>
 #include <math.h>
+#include <queue>
 #include "util/util.h"
 using namespace std;
 
@@ -28,12 +29,19 @@ class graph {
 
         size_t getAirportSize();
         size_t getAirportRowSize(int i);
+        map<string, bool> getVisited();
+        map<string,vector<pair<string, int>>> getGraph();
+
 
         pair<string, string> getLatLong(string airport_code);
-        int calculateDist(string src_airport, string dest_airport);
+        long double toRadians(const long double degree);
+        long int calculateDist(string source, string destination);
+
+        void BFS(string s);
 
     private:
         map<string,vector<pair<string, int>>> graph_;
         vector<vector<string>> routes_;
         vector<vector<string>> airports_;
+        map<string, bool> visited;
 };

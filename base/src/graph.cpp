@@ -6,25 +6,59 @@ graph::graph() {
   
 }
 
-//sfo ----> ord
-// sfo ----> AER
+map<string,vector<pair<string, int>>> graph::getGraph() {
+  return graph_;
+}
+
+//bfs traversal
+void graph::BFS(string s)
+{
+    queue<string> _queue;
+ 
+    visited[s] = true;
+    _queue.push(s);
+ 
+    while(!_queue.empty())
+{
+        s = _queue.front();
+        _queue.pop();
+
+        for (auto adj: graph_[s])
+        {
+            if (!visited[adj.first])
+            {
+                visited[adj.first] = true;
+                _queue.push(adj.first);
+            }
+        }
+    }
+}
+
+
 map<string,vector<pair<string, int>>> graph::getMap() {
   return graph_;
 }
 
 void graph::makeGraph() {
+ //   std::cout << "entering make graph" << std::endl;
 // src_code -> <<dest_code, distance><>>
   for (unsigned i = 0; i < routes_.size(); i++) {
     string src = routes_[i][0];
     string dest = routes_[i][2];
     int dist = calculateDist(src, dest);
+    //if long lat not found skip
+    if (dist == 0) {
+      continue;
+    }
     if (graph_.find(src) != graph_.end()) {
+      //std::cout << "pushing" << std::endl;
         graph_.at(src).push_back(make_pair(dest, dist));
     }
     else {
       vector<pair<string, int>> temp;
       temp.push_back(make_pair(dest, dist));
       graph_.insert({src, temp});
+     // std::cout << "inserting" << std::endl;
     }
   }
   
@@ -46,22 +80,54 @@ pair<string, string> graph::getLatLong(string airport_code) {
   return pair<string, string>("-1", "-1");
 }
 
-//Calculate distance between two airports 
-int graph::calculateDist(string src_airport, string dest_airport) {
-  pair<string, string> src_latlong = getLatLong(src_airport);
-  pair<string, string> dest_latlong = getLatLong(dest_airport);
 
-  // Distance, d = 3963.0 * arccos[(sin(lat1) * sin(lat2)) + cos(lat1) * cos(lat2) * cos(long2 – long1)]
-  double distance = 3963.0 * acos((sin(stod(src_latlong.first)) * sin(stod(dest_latlong.first))) + cos(stod(src_latlong.first)) * cos(stod(dest_latlong.first)) * cos(stod(dest_latlong.second) - stod(src_latlong.second)));
-  cout << "DISTANCE BETWEEN SFO ORD IS " << distance << endl;
-  // return int(distance);
-  return 0;
+long double graph::toRadians(const long double degree)
+{
+    long double one_deg = (M_PI) / 180;
+    return (one_deg * degree);
+}
+
+long int graph::calculateDist(string source, string destination)
+{
+    pair<string, string> src = getLatLong(source);
+    pair<string, string> dest = getLatLong(destination);
+
+    //if long lat of either not found skip
+    if ((src.first == "-1" && src.second == "-1") || (dest.second == "-1" && dest.first == "-1")) {
+      return 0;
+    }
+
+    long double lat1 = toRadians(stod(src.first));
+    long double long1 = toRadians(stod(src.second));
+    long double lat2 = toRadians(stod(dest.first));
+    long double long2 = toRadians(stod(dest.second));
+     
+    long double dlong = long2 - long1;
+    long double dlat = lat2 - lat1;
+ 
+    long double dist = pow(sin(dlat / 2), 2) + cos(lat1) * cos(lat2) * pow(sin(dlong / 2), 2);
+ 
+    dist = 2 * asin(sqrt(dist));
+
+    // Kilometers, R = 6371
+    // Use R = 3956 for miles
+    long double miles_conversion = 3956;
+    
+    dist = dist * miles_conversion;
+        //  cout << "DISTANCE BETWEEN " << source << " and " <<  destination << " is " << int(dist) << endl;
+    return (int)dist;
 }
 
 //Gets the airport elements in each row
 size_t graph::getAirportRowSize(int i) {
   return airports_.at(i).size();
 }
+
+// Get visited
+map<string, bool> graph::getVisited() {
+  return visited;
+}
+
 
 //Gets the amount of rows in the airport data
 size_t graph::getAirportSize() {
@@ -97,7 +163,7 @@ ifstream ifs(filename);
     }
         cout<< endl;
   }
-  cout << "Routes Size: " << routes_.size() << endl;
+ // cout << "Routes Size: " << routes_.size() << endl;
   return "";
 }
 size_t graph::getRoutesSize() {
@@ -144,6 +210,6 @@ ifstream ifs(filename);
     }
         cout<< endl;
   }
-  cout << "Airport Size: " << airports_.size() << endl;
+ // cout << "Airport Size: " << airports_.size() << endl;
   return "";
 }
