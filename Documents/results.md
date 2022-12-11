@@ -21,10 +21,12 @@ Finally, we learnt the importance of writing test cases. Sometimes our algorithm
 ## Dijkstra’s 
 
 
-### Summary: We use Dijkstra's algorithm to find direct and one stop flights from a source to a destination airport. Our dijkstra’s class takes in our graph, wrote one test case where there are both 0 and 1 stops between two airports. For this test case we ensured that the destinations and stops in the output are correct. We wrote a second test case with no direct flights, only source, and destination (represented in diagram below). O(nodes + edges).
+### Summary: 
+We use Dijkstra's algorithm to find direct and one stop flights from a source to a destination airport. Our dijkstra’s class takes in our graph, wrote one test case where there are both 0 and 1 stops between two airports. For this test case we ensured that the destinations and stops in the output are correct. We wrote a second test case with no direct flights, only source, and destination (represented in diagram below). O(nodes + edges).
 
 
-### Tests: We wrote tests for common and edge cases for this algorithm. We stopovers. This was to ensure that the algorithm was able to still find the shortest paths and correctly identify the number of stops. Finally, we wrote an edge case that checks if the algorithm can identify when incorrect input is fed to it and/or no routes exist.
+### Tests: 
+We wrote tests for common and edge cases for this algorithm. We stopovers. This was to ensure that the algorithm was able to still find the shortest paths and correctly identify the number of stops. Finally, we wrote an edge case that checks if the algorithm can identify when incorrect input is fed to it and/or no routes exist.
 
 
 ### Diagram:
@@ -38,10 +40,12 @@ Finally, we learnt the importance of writing test cases. Sometimes our algorithm
 ## BFS
 
 
-### Summary: We used breadth-first search to identify all the airports in our dataset and check whether all the airports were being inputted into our graph. This allows us to traverse the graph for airports. Its argument is the airport source IATA code (Ex: SFO or ORD) we want to start traversing BFS from. O(n).
+### Summary: 
+We used breadth-first search to identify all the airports in our dataset and check whether all the airports were being inputted into our graph. This allows us to traverse the graph for airports. Its argument is the airport source IATA code (Ex: SFO or ORD) we want to start traversing BFS from. O(n).
 
 
-### Tests: We tested by comparing the saved vector of airport IATA codes from the BFS algorithm with those returned from a for loop through the map. We did this multiple times with a small-sized and medium-sized dataset. Our BFS is also checked when we check our graph for correctly taking in the routes and airport data we pass into it. We also checked if the airport is valid or in the graph. 
+### Tests: 
+We tested by comparing the saved vector of airport IATA codes from the BFS algorithm with those returned from a for loop through the map. We did this multiple times with a small-sized and medium-sized dataset. Our BFS is also checked when we check our graph for correctly taking in the routes and airport data we pass into it. We also checked if the airport is valid or in the graph. 
 
 
 ### Diagram:
@@ -54,10 +58,12 @@ Finally, we learnt the importance of writing test cases. Sometimes our algorithm
 ## Map Output
 
 
-### Summary: The Map output  function takes in an empty map of the world and draws the source airport, destination airport, and stops based on the route passed into the output constructor.  The source is colored in red, the destination in green, and any  potential stops in blue. If the airports passed into the constructor do not exist in the graph, nothing is outputted to the map. O(n^2) for pixel coloring.
+### Summary: 
+The Map output  function takes in an empty map of the world and draws the source airport, destination airport, and stops based on the route passed into the output constructor.  The source is colored in red, the destination in green, and any  potential stops in blue. If the airports passed into the constructor do not exist in the graph, nothing is outputted to the map. O(n^2) for pixel coloring.
 
 
-### Tests: We tested the function by calculating the pixel coordinates at which the corresponding airports would be colored and checking that they are changed to the appropriate color depending on whether the airport is a source, destination, or stop. For a map that should remain empty, we iterate through every pixel in the image and check that it is equal to the pixels of an empty map.
+### Tests: 
+We tested the function by calculating the pixel coordinates at which the corresponding airports would be colored and checking that they are changed to the appropriate color depending on whether the airport is a source, destination, or stop. For a map that should remain empty, we iterate through every pixel in the image and check that it is equal to the pixels of an empty map.
 
 
 ### Diagram: 
