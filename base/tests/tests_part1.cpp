@@ -226,3 +226,72 @@ TEST_CASE("Only 1 stops") {
  REQUIRE(dij.get_shortest_paths() == expected_shortest_paths);
  REQUIRE(dij.get_shortest_paths().size() == 2);
 }
+TEST_CASE("Map Output - 1") {
+    vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"}, {"SFO", "1234", "EWR", "1237"}, {"ORD", "1235", "EWR", "1237"} , {"LAX", "1236", "EWR", "1237"}    };
+    vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "118"}, {"EWR", "40", "74"}};
+    graph g(routes, airports_);
+    g.makeGraph();
+    
+    dijkstra dij(g.getMap(), "ORD", "EWR");
+    dij.dijkstra_distance();
+    auto test =  dij.get_shortest_paths();
+    std::cout << dij.source << " " << dij.destination <<std::endl;
+    std::cout <<test.size() <<std::endl;
+    mappic map_out("../empty_map.png");    
+    map_out.drawAirports(g,dij);
+
+    //Checking Red
+    REQUIRE(map_out.png->getPixel(333,309).h == 120);
+    REQUIRE(map_out.png->getPixel(333,309).s == 1);
+    REQUIRE(map_out.png->getPixel(333,309).l == .25);
+    //Checking Green
+    REQUIRE(map_out.png->getPixel(288,299).h == 0);
+    REQUIRE(map_out.png->getPixel(288,299).s == 1);
+    REQUIRE(map_out.png->getPixel(288,299).l == .5);  
+}
+
+TEST_CASE("Map Output - 2") {
+    vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"}, {"SFO", "1234", "EWR", "1237"}, {"ORD", "1235", "EWR", "1237"} , {"LAX", "1236", "EWR", "1237"}    };
+    vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "118"}, {"EWR", "40", "74"}};
+    graph g(routes, airports_);
+    g.makeGraph();
+    
+    dijkstra dij(g.getMap(), "SFO", "ORD");
+    dij.dijkstra_distance();
+    auto test =  dij.get_shortest_paths();
+    std::cout << dij.source << " " << dij.destination <<std::endl;
+    std::cout <<test.size() <<std::endl;
+    mappic map_out("../empty_map.png");    
+    map_out.drawAirports(g,dij);
+
+    //Checking Red
+    REQUIRE(map_out.png->getPixel(443,289).h == 120);
+    REQUIRE(map_out.png->getPixel(443,289).s == 1);
+    REQUIRE(map_out.png->getPixel(443,289).l == .25);
+    //Checking Green
+    REQUIRE(map_out.png->getPixel(333,309).h == 0);
+    REQUIRE(map_out.png->getPixel(333,309).s == 1);
+    REQUIRE(map_out.png->getPixel(333,309).l == .5);
+}
+
+TEST_CASE("Map Output - Empty") {
+    vector<vector<string>> routes = {   };
+    vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "118"}, {"EWR", "40", "74"}};
+    graph g(routes, airports_);
+    g.makeGraph();
+    
+    dijkstra dij(g.getMap(), "SDF", "WYS");
+    dij.dijkstra_distance();
+    auto test =  dij.get_shortest_paths();
+
+    mappic map_out("../World_map_political_ISO.png");  
+    map_out.drawAirports(g,dij);
+    
+    mappic expected("../globe.png"); // have empty map
+    for (int x = 0; x < expected.map_width - 1;  x++ ) {
+      for (int y = 0; y < expected.map_height - 1; y++ ) {
+          REQUIRE(expected.png->getPixel(x,y) == map_out.png->getPixel(x,y));
+      }
+    }
+
+}
