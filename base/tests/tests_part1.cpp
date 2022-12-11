@@ -8,6 +8,7 @@
 #include <locale>
 #include "graph.h"
 #include "dijkstra.h"
+#include "mappic.h"
 #include "cs225/point.h"
 
 
