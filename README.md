@@ -1,44 +1,34 @@
 # teamZero
-CS225 Final Project
+CS225 Final Project: Route Finder
 
-1. Must load one or more data files as a graph and be able to use that graph to run algorithms of interest to the data set. 
+![World_map_political_ISO](https://user-images.githubusercontent.com/54860072/206866561-f355532b-4ac6-40c8-afe6-4e42b4a0232e.png)
 
-2. Your code must work on your chosen data set and on other data that is of the correct format to match the data set you are working on.
+Our ultimate goal is to inspire people to see their options when flying to a place in a graphical and quick way. We are using BFS and Dijkstra’s algorithm to ultimately provide a graphical output to the user about the various paths they can take to their destination.
 
-3. You should have tests for each of your algorithms with appropriate test cases. These should be similar to the tests we provide on labs or mps.
+# Presentation Video
+We'll Link it here
 
-4. Your code must build and run on EWS using only the material in your repo and libraries publicly installed on EWS. 
+# Data
+We will be using the [route](https://openflights.org/data.html#route) and [aiport](https://openflights.org/data.html#airport) datasets from [OpenFlights](https://openflights.org). We filter and clean both datasets in our program.
 
-5. All instructions needed to build the project must be in your repo and easy to understand.
+# Code
+All major files of our classes and functions are in /base/src. In this directory, files and functions for data cleaning and storage (graph.cpp), graph implementation (graph.cpp), breadth-first search algorithm (graph.cpp), Dijkstra's algorithm (dijkstra.cpp), and our map output visualization (mappic.cpp).
 
-Algorithms:
-Use one of the Traversals we covered in class and be able to output that result. It must also handle two other options one of which must be from the complex or uncovered options listed below.
+# Tests.
+Tests are located in /base/tests. Test data files are located in /base for ease of access in the form of small and complete datasets for both routes and airports.
 
-Traversals:
-1. BFS (Breadth First Search)
-2. DFS (Depth First Search)
+Look below on how to run tests!
 
-Covered Algorithms:
-Shortest Path:
-1. Dijkstra’s Algorithm
-2. Floyd-Warshall Algorithm
+We mainly test for four components of our project, correct data parsing and storage of routes and airport data, correct graph storage and edge distance calculations, complete graph traversal of breadth-first search algorithm. We additionally check for incomplete data and if an airport cannot be found. For more info on what we are testing, please check out the comments in the /base/tests directory!
 
-Minimum Spanning Tree:
-1. Kruskal Algorithm
-2. Prim’s Algorithm
+# Documents (Written Report, Project Proposal, Team Contract)
+These are located in /Documents
 
-Complex or Uncovered Options:
-A* Search (https://en.wikipedia.org/wiki/A*_search_algorithm)
-Iterative deepening depth-first search (https://en.wikipedia.org/wiki/Iterative_deepening_depth-first_search)
-Delta-stepping SSSP (https://www.sciencedirect.com/science/article/pii/S0196677403000762)
-Graphic Output of Graph
-Project on to map based on data
-Force-directed graph drawing (https://en.wikipedia.org/wiki/Force-directed_graph_drawing)
-Layered graph drawing (https://en.wikipedia.org/wiki/Layered_graph_drawing)
-Other methods
-Betweenness centrality (https://en.wikipedia.org/wiki/Betweenness_centrality)
-Eulerian path / cycle identification (https://en.wikipedia.org/wiki/Eulerian_path)
-Strongly connected component (https://en.wikipedia.org/wiki/Strongly_connected_component#Algorithms)
-PageRank (https://en.wikipedia.org/wiki/PageRank)
-Other ideas with improvement
+# Running Instructions
+First, make sure you are running in Docker. If not, follow these [instructions](https://courses.engr.illinois.edu/cs225/fa2022/resources/own-machine/). Second, traverse to the /base directory. If there is already a build folder, delete it. Type each "mkdir build" and "cd build" in the terminal separately (should be in teamZero/base/build). Run "cmake .." 
 
+To ultimately use our program, run make && ./mosaics source_airport destination_airport. Fill in the source and destination with an airport of your choice in the International Air Transport Association Location Identifier 3-letter code. For example, the San Francisco International Airport would be SFO. The Chicago O'Hare International Airport is ORD.
+
+To run tests, make sure you are in the /base/build directory and run "make test && ./test"
+
+# Diagrams
