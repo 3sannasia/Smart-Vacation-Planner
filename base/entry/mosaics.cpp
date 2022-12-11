@@ -30,43 +30,20 @@ using namespace std;
 
 int main(int argc, char** argv) {
     // pass source, shortest paths, destination
-    // graph g;
-    // std::cout << g.file_to_stringRoute("../test_routes.csv") << std::endl;
-    // std::cout << g.file_to_stringAirport("../test_airport.csv") << std::endl;
-    // string cur = "AER";
-    // std::cout << "Getting longitude and latitude of AER: "<< g.getLatLong(cur).first << " " <<  g.getLatLong(cur).second << std::endl;
-    //TEST 1
-    vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"}, {"SFO", "1234", "EWR", "1237"}, {"ORD", "1235", "EWR", "1237"} , {"LAX", "1236", "EWR", "1237"}    };
-    vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "118"}, {"EWR", "40", "74"}};
-    graph g(routes, airports_);
+     graph g;
+     g.file_to_stringRoute("../test_routes.csv");
+     g.file_to_stringAirport("../test_airport.csv");
+
     g.makeGraph();
     
-    for (unsigned int i = 0; i < g.getMap()["LAX"].size(); i++) {
-        std::cout << "last case" <<  g.getMap()["LAX"].at(i).first << std::endl;
-    }
-    dijkstra dij(g.getMap(), "SFO", "EWR");
+    dijkstra dij(g.getMap(), "ORD", "EWR");
     dij.dijkstra_distance();
     auto test =  dij.get_shortest_paths();
     std::cout << dij.source << " " << dij.destination <<std::endl;
-
+    std::cout <<test.size() <<std::endl;
     mappic map_out("../empty_map.png");    
     map_out.drawAirports(g,dij);
     
-    //TEST 2
-
-    vector<vector<string>> routes2 = {{"ORD", "1234", "SFO", "1235"}, {"ORD", "1234", "LAX", "1236"}, {"ORD", "1234", "EWR", "1237"}, {"SFO", "1235", "EWR", "1237"} , {"LAX", "1236", "EWR", "1237"}    };
-    vector<vector<string>> airports_2 = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "118"}, {"EWR", "40", "74"}};
-    graph g2(routes2, airports_2);
-    g2.makeGraph();
-   
-    dijkstra dij2(g2.getMap(), "ORD", "LAX");
-    dij2.dijkstra_distance();
-    auto test2 =  dij2.get_shortest_paths();
-    std::cout << dij2.source << " " << dij2.destination <<std::endl;
-
-    // mappic map_out2("../empty_map.png");    
-    // map_out2.drawAirports(g2,dij2);
-
     return 0;
 }
 
