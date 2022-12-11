@@ -178,7 +178,6 @@ TEST_CASE("0 to 1 stops test") {
   // vector<vector<string>> routes = {{"LAX", "1234", "JFK", "1235"}, {"LAX", "1234", "SFO", "1236"}, {"LAX", "1234", "ORD", "1236"},{"SFO", "1234", "ORD", "JFK"}, {"ORD", "1234", "ORD", "EWR"}, {"EWR", "1234", "JFK", "1236"} };
   // vector<vector<string>> airports_ = {{"SFO", "0", "0"}, {"ORD", "0", "0"}, {"LAX", "0", "0"}, {"JFK", "0", "0"}, {"EWR", "0", "0"}};
  
-<<<<<<< HEAD
    vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"}, {"SFO", "1234", "EWR", "1237"}, {"ORD", "1235", "EWR", "1237"} , {"LAX", "1236", "EWR", "1237"}    };
   vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "118"}, {"EWR", "34", "119"}};
   graph g(routes, airports_);
@@ -187,12 +186,6 @@ TEST_CASE("0 to 1 stops test") {
 //   vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "118"}, {"EWR", "34", "119"}};
 //   graph g(routes, airports_);
 //   g.makeGraph();
-=======
-  vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"}, {"SFO", "1234", "EWR", "1237"}, {"ORD", "1235", "EWR", "1237"} , {"LAX", "1236", "EWR", "1237"}    };
-  vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "118"}, {"EWR", "34", "119"}};
-  graph g(routes, airports_);
-  g.makeGraph();
->>>>>>> f8ae3ef (Completed Code, Tests for Map output, cleaned Main)
   
   for (unsigned int i = 0; i < g.getMap()["LAX"].size(); i++) {
     std::cout << "last case" <<  g.getMap()["LAX"].at(i).first << std::endl;
@@ -212,7 +205,6 @@ TEST_CASE("0 to 1 stops test") {
  REQUIRE(dij.get_shortest_paths().size() == 3);
 
  
-<<<<<<< HEAD
 // }
  REQUIRE(dij.get_shortest_paths() == expected_shortest_paths);
  REQUIRE(dij.get_shortest_paths().size() == 3);
@@ -221,12 +213,6 @@ TEST_CASE("0 to 1 stops test") {
 
 TEST_CASE("Only 1 stops") {
   vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"},  {"ORD", "1235", "EWR", "1237"} , {"LAX", "1236", "EWR", "1237"}    };
-=======
-}
-
-TEST_CASE("Only 1 stops") {
-   vector<vector<string>> routes = {{"SFO", "1234", "ORD", "1235"}, {"SFO", "1234", "LAX", "1236"}, {"SFO", "1234", "JFK", "1237"}, {"ORD", "1235", "EWR", "1237"} , {"LAX", "1236", "EWR", "1237"}    };
->>>>>>> f8ae3ef (Completed Code, Tests for Map output, cleaned Main)
   vector<vector<string>> airports_ = {{"SFO", "38", "122"}, {"ORD", "42", "88"}, {"LAX", "34", "118"}, {"EWR", "34", "119"}};
   graph g(routes, airports_);
   g.makeGraph();
@@ -294,11 +280,7 @@ TEST_CASE("Map Output - 2") {
     //Checking Green
     REQUIRE(map_out.png->getPixel(333,309).h == 0);
     REQUIRE(map_out.png->getPixel(333,309).s == 1);
-    REQUIRE(map_out.png->getPixel(333,309).l == .5);  
-    //Checking Blue
-    REQUIRE(map_out.png->getPixel(430,269).h == 216);
-    REQUIRE(map_out.png->getPixel(430,269).s == 1);
-    REQUIRE(map_out.png->getPixel(430,269).l == .8);  
+    REQUIRE(map_out.png->getPixel(333,309).l == .5);
 }
 
 TEST_CASE("Map Output - Empty") {
