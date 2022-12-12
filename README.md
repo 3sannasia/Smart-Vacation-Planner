@@ -1,7 +1,7 @@
 # teamZero
 CS225 Final Project: Route Finder
 
-![World_map_political_ISO](/base/globe.png)
+![World_map_political_ISO](/base/ORD_EWR.png)
 
 Our ultimate goal is to inspire people to see their options when flying to a place in a graphical and quick way. We are using BFS and Dijkstra’s algorithm to ultimately provide a graphical output to the user about the various paths they can take to their destination.
 
