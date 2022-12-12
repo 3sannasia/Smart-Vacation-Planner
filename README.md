@@ -27,7 +27,7 @@ These are located in /Documents
 # Running Instructions
 First, make sure you are running in Docker. If not, follow these [instructions](https://courses.engr.illinois.edu/cs225/fa2022/resources/own-machine/). Second, traverse to the /teamZero/base directory. If there is already a build folder, delete it. Enter "mkdir build" then "cd build" in the terminal. Make sure you are in the directory teamZero/base/build. Run "cmake .." 
 
-To ultimately use our program, run make && ./mosaics source_airport destination_airport (make && ./mosaics SFO ORD) Fill in the source and destination with an airport of your choice in the International Air Transport Association Location Identifier 3-letter code. For example, the San Francisco International Airport would be SFO. The Chicago O'Hare International Airport is ORD.
+To ultimately use our program, run make && ./mosaics source_airport destination_airport (make && ./mosaics AER KZN) Fill in the source and destination with an airport of your choice in the International Air Transport Association Location Identifier 3-letter code. For example, the Sochi International Airport would be AER. The Kazan International Airport is KZN.
 
 To run tests, make sure you are in the /base/build directory and run "make test && ./test"
 
