@@ -6,7 +6,7 @@ CS225 Final Project: Route Finder
 Our ultimate goal is to inspire people to see their options when flying to a place in a graphical and quick way. We are using BFS and Dijkstra’s algorithm to ultimately provide a graphical output to the user about the various paths they can take to their destination.
 
 # Presentation Video
-We'll Link it here
+https://drive.google.com/file/d/1v-j2oDiNa1ZMGOWth5DuYCJ_Bw2mev2B/view?usp=sharing
 
 # Data
 We will be using the [route](https://openflights.org/data.html#route) and [airport](https://openflights.org/data.html#airport) datasets from [OpenFlights](https://openflights.org). We filter and clean both datasets in our program.
