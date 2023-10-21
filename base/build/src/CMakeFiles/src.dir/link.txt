@@ -1,2 +1,0 @@
-/usr/bin/ar qc libsrc.a CMakeFiles/src.dir/dijkstra.cpp.o CMakeFiles/src.dir/graph.cpp.o CMakeFiles/src.dir/mappic.cpp.o
-/usr/bin/ranlib libsrc.a
